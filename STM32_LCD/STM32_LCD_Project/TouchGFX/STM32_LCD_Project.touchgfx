@@ -2,19 +2,242 @@
   "Application": {
     "Screens": [
       {
-        "Name": "Screen1",
+        "Name": "STARTING_background",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "fondo",
+            "Width": 480,
+            "Height": 480,
+            "LockPosition": true,
+            "RelativeFilename": "__generated\\alternate_theme_images_backgrounds_480x480_gradient_dark.png"
+          },
+          {
+            "Type": "Container",
+            "Name": "container_setup",
+            "X": 59,
+            "Y": 104,
+            "Width": 50,
+            "Height": 51,
+            "Components": [
+              {
+                "Type": "ScalableImage",
+                "Name": "button_setup",
+                "Y": 1,
+                "Width": 50,
+                "Height": 50,
+                "LockPosition": true,
+                "Filename": "__generated\\alternate_theme_images_widgets_button_icon_round_huge_fill_action.png",
+                "ScalingAlgorithm": "Nearest-neighbor",
+                "Draggable": true
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "icon_setup",
+                "X": 3,
+                "Y": 8,
+                "Width": 40,
+                "Height": 37,
+                "LockPosition": true,
+                "Filename": "__generated\\icon_theme_images_communication_phonelink_setup_50_50_000000.svg.png",
+                "ScalingAlgorithm": "Nearest-neighbor",
+                "Draggable": true
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "container_automode",
+            "X": 59,
+            "Y": 201,
+            "Width": 50,
+            "Height": 51,
+            "Components": [
+              {
+                "Type": "ScalableImage",
+                "Name": "button_automode",
+                "Y": 1,
+                "Width": 50,
+                "Height": 50,
+                "Filename": "__generated\\alternate_theme_images_widgets_button_icon_round_huge_fill_action.png",
+                "ScalingAlgorithm": "Nearest-neighbor",
+                "Draggable": true
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "icon_automode",
+                "X": 5,
+                "Y": 7,
+                "Width": 40,
+                "Height": 38,
+                "Filename": "cargador.png",
+                "ScalingAlgorithm": "Nearest-neighbor",
+                "Draggable": true
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "container_manual_mode",
+            "X": 59,
+            "Y": 301,
+            "Width": 50,
+            "Height": 51,
+            "Components": [
+              {
+                "Type": "ScalableImage",
+                "Name": "button_manual",
+                "Y": 1,
+                "Width": 50,
+                "Height": 50,
+                "LockPosition": true,
+                "Filename": "__generated\\alternate_theme_images_widgets_button_icon_round_huge_fill_action.png",
+                "ScalingAlgorithm": "Nearest-neighbor",
+                "Draggable": true
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "icon_manual",
+                "X": 4,
+                "Y": 6,
+                "Width": 40,
+                "Height": 39,
+                "Filename": "haciendo-clic.png",
+                "ScalingAlgorithm": "Nearest-neighbor",
+                "Draggable": true
+              }
+            ]
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "imagen_fondo_arriba",
+            "Width": 320,
+            "Height": 51,
+            "Filename": "__generated\\light_theme_images_bars_240x240_bottom_dark.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "imagen_ies",
+            "X": 84,
+            "Y": 406,
+            "Width": 156,
+            "Height": 51,
+            "Filename": "IES.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "imagen_politecnica",
+            "Width": 61,
+            "Height": 51,
+            "Filename": "POLITECNICA.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "WINDOW_CONTROL_TEXT",
+            "X": 76,
+            "Y": 14,
+            "Width": 182,
+            "Height": 23,
+            "TextId": "__SingleUse_1FQD",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "ScrollableContainer",
+            "Name": "scrollableContainer1",
+            "X": 270,
+            "Y": 3,
+            "Width": 47,
+            "Height": 47,
+            "HorizontalScrollEnabled": true,
+            "VerticalScrollEnabled": true,
+            "ScrollbarsVisibleOnPressed": true,
+            "ScrollbarsAlpha": 255,
+            "Components": [
+              {
+                "Type": "ScalableImage",
+                "Name": "fondoCasita",
+                "X": 4,
+                "Y": 3,
+                "Width": 40,
+                "Height": 40,
+                "LockPosition": true,
+                "Filename": "__generated\\alternate_theme_images_widgets_button_icon_rounded_huge_fill_pressed.png",
+                "ScalingAlgorithm": "Bilinear Interpolation"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "iconoCasita",
+                "X": 2,
+                "Y": 3,
+                "Width": 46,
+                "Height": 41,
+                "LockPosition": true,
+                "Filename": "__generated\\icon_theme_images_action_home_filled_50_50_000000.svg.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "SETUP_TEXT",
+            "X": 129,
+            "Y": 113,
+            "Width": 153,
+            "Height": 34,
+            "TextId": "__SingleUse_L0JY",
+            "TextRotation": "0"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "MANUAL_MODE_TEXT",
+            "X": 129,
+            "Y": 310,
+            "Width": 174,
+            "Height": 34,
+            "TextId": "__SingleUse_4HV7",
+            "TextRotation": "0"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "AUTO_MODE_TEXT",
+            "X": 129,
+            "Y": 212,
+            "Width": 163,
+            "Height": 30,
+            "TextId": "__SingleUse_7R8Y",
+            "TextRotation": "0"
+          }
+        ],
+        "Interactions": []
+      }
+    ],
+    "CustomContainerDefinitions": [
+      {
+        "Name": "CustomContainer1",
+        "X": 122,
+        "Y": 92,
+        "Width": 68,
+        "Height": 65,
         "Components": [],
         "Interactions": []
       }
     ],
-    "CustomContainerDefinitions": [],
     "Name": "STM32_LCD_Project",
     "Resolution": {
       "Width": 320,
       "Height": 480
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "Screen1",
+    "StartupScreenName": "STARTING_background",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

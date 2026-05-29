@@ -5,10 +5,25 @@
   </Languages>
   <Texts>
     <TextGroup Id="Group1" />
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_4HV7" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">MANUAL MODE</Translation>
+      </Text>
+      <Text Id="__SingleUse_7R8Y" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">AUTO MODE</Translation>
+      </Text>
+      <Text Id="__SingleUse_L0JY" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">SETUP</Translation>
+      </Text>
+      <Text Id="__SingleUse_1FQD" Alignment="Center" TypographyId="Typography1">
+        <Translation Language="GB">WINDOW CONTROL</Translation>
+      </Text>
+    </TextGroup>
   </Texts>
   <Typographies>
     <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Large" Font="consolab.ttf" Size="25" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography1" Font="consola.ttf" Size="23" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
   </Typographies>
 </TextDatabase>
