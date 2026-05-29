@@ -5,15 +5,18 @@ backup_*.ioc
 # TouchGFX
 TouchGFX/*_backup.touchgfx
 TouchGFX/build/
-#TouchGFX/config/                    Comentado porque claude lo recomienda
-#TouchGFX/generated/                 Ignorada para que no se tenga que volver a compilar todo de nuevo
+# TouchGFX/config/                    Comentado porque claude lo recomienda
+# TouchGFX/generated/                 Ignorada para que no se tenga que volver a compilar todo de nuevo
+# Solo ignorar binarios/cache de generated, no el source
+TouchGFX/generated/**/*.o
+TouchGFX/generated/**/*.d
 #TouchGFX/simulator/                 Se modifica a los 3 de abajo por peticion de claude
 # Simulator - keep src, ignore binaries
 TouchGFX/simulator/build/
 TouchGFX/simulator/*.out
 TouchGFX/simulator/*.exe
 TouchGFX/simulator/*.bin
-TouchGFX/target.config
+#TouchGFX/target.config
 Middlewares/ST/touchgfx/
 Middlewares/ST/touchgfx_components/
 Middlewares/ST/touchgfx_backup*/

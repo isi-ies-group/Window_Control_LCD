@@ -19,10 +19,10 @@ dist/
 # Package files
 *.jar
 
-*.vscode
+*.vscode/
 
 # Maven
-target/
+src/**/target/
 dist/
 
 # JetBrains IDE
@@ -39,7 +39,7 @@ Thumbs.db
 
 # Applications
 *.app
-*.exe
+#*.exe              Se elimina para que no afecte a TouchGFX/simulator/*.exe
 *.war
 
 # Large media files
@@ -59,7 +59,7 @@ Release/
 
 *.o
 *.elf
-*.bin
+#*.bin          Eliminado para que no afecte a TouchGFX/simulator/*.bin
 *.map
 .settings/
 .metadata/
