@@ -1,0 +1,5 @@
+[ProjectFiles]
+[Groups]
+Application/User/TouchGFX/Target=../TouchGFX/Target/KeySampler.cpp;../TouchGFX/Target/CortexMMCUInstrumentation.cpp
+Application/User/Core=..\Core\Src\w25q64.c
+[Others]
