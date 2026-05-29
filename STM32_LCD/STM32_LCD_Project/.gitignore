@@ -17,7 +17,11 @@ TouchGFX/simulator/*.out
 TouchGFX/simulator/*.exe
 TouchGFX/simulator/*.bin
 #TouchGFX/target.config
-Middlewares/ST/touchgfx/
+# En vez de ignorar todo touchgfx:
+# Middlewares/ST/touchgfx/
+# Ignorar solo lo regenerable, conservar la lib:
+Middlewares/ST/touchgfx/framework/
+Middlewares/ST/touchgfx/generated/
 Middlewares/ST/touchgfx_components/
 Middlewares/ST/touchgfx_backup*/
 gcc/components.mk
