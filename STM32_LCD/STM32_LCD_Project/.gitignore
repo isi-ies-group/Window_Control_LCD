@@ -2,44 +2,16 @@
 .mxproject
 backup_*.ioc
 
-# TouchGFX - solo backups y binarios, trackear todo lo demas
+# Objetos compilados
+*.o
+*.d
+*.elf
+*.map
+
+# TouchGFX backups
 TouchGFX/*_backup.touchgfx
-TouchGFX/build/
-TouchGFX/simulator/build/
-TouchGFX/simulator/*.out
+
+# Simulador compilado
 TouchGFX/simulator/*.exe
+TouchGFX/simulator/*.out
 TouchGFX/simulator/*.bin
-TouchGFX/generated/**/*.o
-TouchGFX/generated/**/*.d
-TouchGFX/Target/generated/**/*.o
-TouchGFX/Target/generated/**/*.d
-
-# Middlewares - solo backups
-Middlewares/ST/touchgfx_backup*/
-
-# gcc - se regenera con Generate Code
-gcc/components.mk
-
-# IAR
-EWARM/settings/
-EWARM/STM32*/
-EWARM/*.dep
-EWARM/*.ewt
-EWARM/*.ipcf
-EWARM/*.custom_argvars
-
-# CubeIDE
-STM32CubeIDE/.settings/
-STM32CubeIDE/Debug/
-STM32CubeIDE/Release/
-
-# Keil
-MDK-ARM/RTE/
-MDK-ARM/STM32*/
-MDK-ARM/DebugConfig/
-MDK-ARM/*.lst
-MDK-ARM/*.out
-MDK-ARM/*vguix.*
-
-# CMake
-build/
