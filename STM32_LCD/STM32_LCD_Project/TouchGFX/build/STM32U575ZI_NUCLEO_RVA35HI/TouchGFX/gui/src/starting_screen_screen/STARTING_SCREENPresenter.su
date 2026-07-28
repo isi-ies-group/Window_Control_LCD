@@ -1,0 +1,5 @@
+TouchGFX/gui/include/gui/starting_screen_screen/STARTING_SCREENPresenter.hpp:28:13:STARTING_SCREENPresenter::~STARTING_SCREENPresenter()	0	static
+TouchGFX/gui/src/starting_screen_screen/STARTING_SCREENPresenter.cpp:10:6:virtual void STARTING_SCREENPresenter::activate()	0	static
+TouchGFX/gui/include/gui/starting_screen_screen/STARTING_SCREENPresenter.hpp:28:13:virtual STARTING_SCREENPresenter::~STARTING_SCREENPresenter()	8	static
+TouchGFX/gui/include/gui/starting_screen_screen/STARTING_SCREENPresenter.hpp:28:13:virtual void* STARTING_SCREENPresenter::_ZThn4_N24STARTING_SCREENPresenterD1Ev()	0	static
+TouchGFX/gui/src/starting_screen_screen/STARTING_SCREENPresenter.cpp:4:1:STARTING_SCREENPresenter::STARTING_SCREENPresenter(STARTING_SCREENView&)	0	static

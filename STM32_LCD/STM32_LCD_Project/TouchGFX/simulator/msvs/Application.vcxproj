@@ -21,11 +21,20 @@
     <ClCompile Include="..\..\generated\gui_generated\src\common\FrontendApplicationBase.cpp"/>
     <ClCompile Include="..\..\gui\src\model\Model.cpp"/>
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp"/>
-    <ClCompile Include="..\..\gui\src\starting_background_screen\STARTING_backgroundPresenter.cpp"/>
-    <ClCompile Include="..\..\gui\src\starting_background_screen\STARTING_backgroundView.cpp"/>
-    <ClCompile Include="..\..\generated\gui_generated\src\starting_background_screen\STARTING_backgroundViewBase.cpp"/>
     <ClCompile Include="..\..\gui\src\containers\CustomContainer1.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\CustomContainer1Base.cpp"/>
+    <ClCompile Include="..\..\gui\src\manual_screen_screen\MANUAL_SCREENPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\manual_screen_screen\MANUAL_SCREENView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\manual_screen_screen\MANUAL_SCREENViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\starting_screen_screen\STARTING_SCREENPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\starting_screen_screen\STARTING_SCREENView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\starting_screen_screen\STARTING_SCREENViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\automode_screen_screen\AUTOMODE_SCREENPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\automode_screen_screen\AUTOMODE_SCREENView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\automode_screen_screen\AUTOMODE_SCREENViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\setup_screen_screen\SETUP_SCREENPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\setup_screen_screen\SETUP_SCREENView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\setup_screen_screen\SETUP_SCREENViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -176,11 +185,20 @@
     <ClInclude Include="..\..\gui\include\gui\model\ModelListener.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp"/>
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\starting_background_screen\STARTING_backgroundPresenter.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\starting_background_screen\STARTING_backgroundView.hpp"/>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\starting_background_screen\STARTING_backgroundViewBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\containers\CustomContainer1.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\CustomContainer1Base.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\manual_screen_screen\MANUAL_SCREENPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\manual_screen_screen\MANUAL_SCREENView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\manual_screen_screen\MANUAL_SCREENViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\starting_screen_screen\STARTING_SCREENPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\starting_screen_screen\STARTING_SCREENView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\starting_screen_screen\STARTING_SCREENViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\automode_screen_screen\AUTOMODE_SCREENPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\automode_screen_screen\AUTOMODE_SCREENView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\automode_screen_screen\AUTOMODE_SCREENViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\setup_screen_screen\SETUP_SCREENPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\setup_screen_screen\SETUP_SCREENView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\setup_screen_screen\SETUP_SCREENViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

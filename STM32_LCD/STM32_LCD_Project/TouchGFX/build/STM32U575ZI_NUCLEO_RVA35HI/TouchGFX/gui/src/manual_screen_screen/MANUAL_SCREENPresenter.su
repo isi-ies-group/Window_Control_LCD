@@ -1,0 +1,5 @@
+TouchGFX/gui/include/gui/manual_screen_screen/MANUAL_SCREENPresenter.hpp:28:13:MANUAL_SCREENPresenter::~MANUAL_SCREENPresenter()	0	static
+TouchGFX/gui/src/manual_screen_screen/MANUAL_SCREENPresenter.cpp:10:6:virtual void MANUAL_SCREENPresenter::activate()	0	static
+TouchGFX/gui/include/gui/manual_screen_screen/MANUAL_SCREENPresenter.hpp:28:13:virtual MANUAL_SCREENPresenter::~MANUAL_SCREENPresenter()	8	static
+TouchGFX/gui/include/gui/manual_screen_screen/MANUAL_SCREENPresenter.hpp:28:13:virtual void* MANUAL_SCREENPresenter::_ZThn4_N22MANUAL_SCREENPresenterD1Ev()	0	static
+TouchGFX/gui/src/manual_screen_screen/MANUAL_SCREENPresenter.cpp:4:1:MANUAL_SCREENPresenter::MANUAL_SCREENPresenter(MANUAL_SCREENView&)	0	static

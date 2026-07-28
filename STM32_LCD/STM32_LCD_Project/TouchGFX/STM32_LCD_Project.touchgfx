@@ -2,7 +2,7 @@
   "Application": {
     "Screens": [
       {
-        "Name": "STARTING_background",
+        "Name": "STARTING_SCREEN",
         "Components": [
           {
             "Type": "Image",
@@ -17,12 +17,12 @@
             "Name": "container_setup",
             "X": 59,
             "Y": 104,
-            "Width": 50,
+            "Width": 215,
             "Height": 51,
             "Components": [
               {
                 "Type": "ScalableImage",
-                "Name": "button_setup",
+                "Name": "setup_background",
                 "Y": 1,
                 "Width": 50,
                 "Height": 50,
@@ -42,6 +42,23 @@
                 "Filename": "__generated\\icon_theme_images_communication_phonelink_setup_50_50_000000.svg.png",
                 "ScalingAlgorithm": "Nearest-neighbor",
                 "Draggable": true
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "setup_button",
+                "Width": 215,
+                "Height": 51,
+                "Visible": false,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "ImageButtonStyle",
+                    "ImageReleased": "cargador.png",
+                    "ImagePressed": "tocar.png"
+                  }
+                ]
               }
             ]
           },
@@ -50,15 +67,16 @@
             "Name": "container_automode",
             "X": 59,
             "Y": 201,
-            "Width": 50,
+            "Width": 215,
             "Height": 51,
             "Components": [
               {
                 "Type": "ScalableImage",
-                "Name": "button_automode",
+                "Name": "automode_background",
                 "Y": 1,
                 "Width": 50,
                 "Height": 50,
+                "LockPosition": true,
                 "Filename": "__generated\\alternate_theme_images_widgets_button_icon_round_huge_fill_action.png",
                 "ScalingAlgorithm": "Nearest-neighbor",
                 "Draggable": true
@@ -70,9 +88,27 @@
                 "Y": 7,
                 "Width": 40,
                 "Height": 38,
+                "LockPosition": true,
                 "Filename": "cargador.png",
                 "ScalingAlgorithm": "Nearest-neighbor",
                 "Draggable": true
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "automode_button",
+                "X": -2,
+                "Width": 217,
+                "Height": 51,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "ImageButtonStyle",
+                    "ImageReleased": "cargador.png",
+                    "ImagePressed": "tocar.png"
+                  }
+                ]
               }
             ]
           },
@@ -81,12 +117,12 @@
             "Name": "container_manual_mode",
             "X": 59,
             "Y": 301,
-            "Width": 50,
+            "Width": 223,
             "Height": 51,
             "Components": [
               {
                 "Type": "ScalableImage",
-                "Name": "button_manual",
+                "Name": "manual_background",
                 "Y": 1,
                 "Width": 50,
                 "Height": 50,
@@ -102,9 +138,26 @@
                 "Y": 6,
                 "Width": 40,
                 "Height": 39,
+                "LockPosition": true,
                 "Filename": "haciendo-clic.png",
                 "ScalingAlgorithm": "Nearest-neighbor",
                 "Draggable": true
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "manual_button",
+                "Width": 223,
+                "Height": 51,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "ImageButtonStyle",
+                    "ImageReleased": "cargador.png",
+                    "ImagePressed": "tocar.png"
+                  }
+                ]
               }
             ]
           },
@@ -217,7 +270,428 @@
             "TextRotation": "0"
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "ENTER_MANUAL",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "manual_button"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "MANUAL_SCREEN"
+            }
+          },
+          {
+            "InteractionName": "ENTER_SETUP",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "setup_button"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "SETUP_SCREEN"
+            }
+          },
+          {
+            "InteractionName": "ENTER_AUTOMODE",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "automode_button"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "AUTOMODE_SCREEN"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "AUTOMODE_SCREEN",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "fondo",
+            "Width": 480,
+            "Height": 480,
+            "LockPosition": true,
+            "RelativeFilename": "__generated\\alternate_theme_images_backgrounds_480x480_gradient_dark.png"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "imagen_fondo_arriba",
+            "X": -6,
+            "Width": 326,
+            "Height": 50,
+            "Filename": "__generated\\clay_theme_images_bars_480x272_bottom_floating_base.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "WINDOW_CONTROL_TEXT",
+            "X": 108,
+            "Y": 11,
+            "Width": 104,
+            "Height": 23,
+            "TextId": "__SingleUse_7R0H",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "ScrollableContainer",
+            "Name": "scrollableContainer1",
+            "X": 270,
+            "Y": 3,
+            "Width": 47,
+            "Height": 47,
+            "HorizontalScrollEnabled": true,
+            "VerticalScrollEnabled": true,
+            "ScrollbarsVisibleOnPressed": true,
+            "ScrollbarsAlpha": 255,
+            "Components": [
+              {
+                "Type": "ScalableImage",
+                "Name": "fondoCasita",
+                "X": 4,
+                "Y": 3,
+                "Width": 40,
+                "Height": 40,
+                "LockPosition": true,
+                "Filename": "__generated\\alternate_theme_images_widgets_button_icon_rounded_huge_fill_pressed.png",
+                "ScalingAlgorithm": "Bilinear Interpolation"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "iconoCasita",
+                "X": 2,
+                "Y": 3,
+                "Width": 46,
+                "Height": 41,
+                "LockPosition": true,
+                "Filename": "__generated\\icon_theme_images_action_home_filled_50_50_000000.svg.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              }
+            ]
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "setup_background",
+            "X": 11,
+            "Y": 2,
+            "Width": 46,
+            "Height": 46,
+            "Filename": "__generated\\alternate_theme_images_widgets_button_icon_round_huge_fill_action.png",
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Draggable": true
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "icon_automode",
+            "X": 14,
+            "Y": 6,
+            "Width": 40,
+            "Height": 38,
+            "Filename": "cargador.png",
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Draggable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "home_button",
+            "X": 270,
+            "Y": 1,
+            "Width": 50,
+            "Height": 51,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "cargador.png",
+                "ImagePressed": "tocar.png"
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "GO_HOME",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "home_button"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "STARTING_SCREEN"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "SETUP_SCREEN",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "fondo",
+            "Width": 480,
+            "Height": 480,
+            "LockPosition": true,
+            "RelativeFilename": "__generated\\alternate_theme_images_backgrounds_480x480_gradient_dark.png"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "imagen_fondo_arriba",
+            "X": -6,
+            "Width": 326,
+            "Height": 50,
+            "Filename": "__generated\\clay_theme_images_bars_480x272_bottom_floating_base.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "WINDOW_CONTROL_TEXT",
+            "X": 127,
+            "Y": 11,
+            "Width": 65,
+            "Height": 23,
+            "TextId": "__SingleUse_AUCO",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "ScrollableContainer",
+            "Name": "scrollableContainer1",
+            "X": 270,
+            "Y": 3,
+            "Width": 47,
+            "Height": 47,
+            "HorizontalScrollEnabled": true,
+            "VerticalScrollEnabled": true,
+            "ScrollbarsVisibleOnPressed": true,
+            "ScrollbarsAlpha": 255,
+            "Components": [
+              {
+                "Type": "ScalableImage",
+                "Name": "fondoCasita",
+                "X": 4,
+                "Y": 3,
+                "Width": 40,
+                "Height": 40,
+                "LockPosition": true,
+                "Filename": "__generated\\alternate_theme_images_widgets_button_icon_rounded_huge_fill_pressed.png",
+                "ScalingAlgorithm": "Bilinear Interpolation"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "iconoCasita",
+                "X": 2,
+                "Y": 3,
+                "Width": 46,
+                "Height": 41,
+                "LockPosition": true,
+                "Filename": "__generated\\icon_theme_images_action_home_filled_50_50_000000.svg.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              }
+            ]
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "setup_background",
+            "X": 11,
+            "Y": 2,
+            "Width": 46,
+            "Height": 46,
+            "Filename": "__generated\\alternate_theme_images_widgets_button_icon_round_huge_fill_action.png",
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Draggable": true
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "icon_setup",
+            "X": 12,
+            "Y": 7,
+            "Width": 40,
+            "Height": 37,
+            "Filename": "__generated\\icon_theme_images_communication_phonelink_setup_50_50_000000.svg.png",
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Draggable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "home_button",
+            "X": 270,
+            "Y": 1,
+            "Width": 50,
+            "Height": 51,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "cargador.png",
+                "ImagePressed": "tocar.png"
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "GO_HOME",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "home_button"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "STARTING_SCREEN"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "MANUAL_SCREEN",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "fondo",
+            "Width": 480,
+            "Height": 480,
+            "LockPosition": true,
+            "RelativeFilename": "__generated\\alternate_theme_images_backgrounds_480x480_gradient_dark.png"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "imagen_fondo_arriba",
+            "X": -6,
+            "Width": 326,
+            "Height": 50,
+            "Filename": "__generated\\clay_theme_images_bars_480x272_bottom_floating_base.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "WINDOW_CONTROL_TEXT",
+            "X": 89,
+            "Y": 11,
+            "Width": 143,
+            "Height": 23,
+            "TextId": "__SingleUse_PXZ7",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "ScrollableContainer",
+            "Name": "scrollableContainer1",
+            "X": 270,
+            "Y": 3,
+            "Width": 47,
+            "Height": 47,
+            "HorizontalScrollEnabled": true,
+            "VerticalScrollEnabled": true,
+            "ScrollbarsVisibleOnPressed": true,
+            "ScrollbarsAlpha": 255,
+            "Components": [
+              {
+                "Type": "ScalableImage",
+                "Name": "fondoCasita",
+                "X": 4,
+                "Y": 3,
+                "Width": 40,
+                "Height": 40,
+                "LockPosition": true,
+                "Filename": "__generated\\alternate_theme_images_widgets_button_icon_rounded_huge_fill_pressed.png",
+                "ScalingAlgorithm": "Bilinear Interpolation"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "iconoCasita",
+                "X": 2,
+                "Y": 3,
+                "Width": 46,
+                "Height": 41,
+                "LockPosition": true,
+                "Filename": "__generated\\icon_theme_images_action_home_filled_50_50_000000.svg.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              }
+            ]
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "manual_background",
+            "X": 11,
+            "Y": 2,
+            "Width": 46,
+            "Height": 46,
+            "Filename": "__generated\\alternate_theme_images_widgets_button_icon_round_huge_fill_action.png",
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Draggable": true
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "icon_manual",
+            "X": 14,
+            "Y": 6,
+            "Width": 38,
+            "Height": 37,
+            "Filename": "haciendo-clic.png",
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Draggable": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "home_button",
+            "X": 270,
+            "Y": 1,
+            "Width": 50,
+            "Height": 51,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "cargador.png",
+                "ImagePressed": "tocar.png"
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "GO_HOME",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "home_button"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "STARTING_SCREEN"
+            }
+          }
+        ]
       }
     ],
     "CustomContainerDefinitions": [
@@ -237,7 +711,7 @@
       "Height": 480
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "STARTING_background",
+    "StartupScreenName": "STARTING_SCREEN",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

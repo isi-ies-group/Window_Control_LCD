@@ -1,0 +1,5 @@
+TouchGFX/gui/include/gui/automode_screen_screen/AUTOMODE_SCREENPresenter.hpp:28:13:AUTOMODE_SCREENPresenter::~AUTOMODE_SCREENPresenter()	0	static
+TouchGFX/gui/src/automode_screen_screen/AUTOMODE_SCREENPresenter.cpp:10:6:virtual void AUTOMODE_SCREENPresenter::activate()	0	static
+TouchGFX/gui/include/gui/automode_screen_screen/AUTOMODE_SCREENPresenter.hpp:28:13:virtual AUTOMODE_SCREENPresenter::~AUTOMODE_SCREENPresenter()	8	static
+TouchGFX/gui/include/gui/automode_screen_screen/AUTOMODE_SCREENPresenter.hpp:28:13:virtual void* AUTOMODE_SCREENPresenter::_ZThn4_N24AUTOMODE_SCREENPresenterD1Ev()	0	static
+TouchGFX/gui/src/automode_screen_screen/AUTOMODE_SCREENPresenter.cpp:4:1:AUTOMODE_SCREENPresenter::AUTOMODE_SCREENPresenter(AUTOMODE_SCREENView&)	0	static

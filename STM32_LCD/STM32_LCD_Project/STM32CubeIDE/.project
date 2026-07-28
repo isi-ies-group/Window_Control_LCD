@@ -330,6 +330,16 @@
 			<locationURI>PARENT-1-PROJECT_LOC/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c</locationURI>
 		</link>
 		<link>
+			<name>Application/User/gui/AUTOMODE_SCREENPresenter.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/automode_screen_screen/AUTOMODE_SCREENPresenter.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/AUTOMODE_SCREENView.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/automode_screen_screen/AUTOMODE_SCREENView.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/gui/FrontendApplication.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/common/FrontendApplication.cpp</locationURI>
@@ -340,19 +350,39 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/containers/CustomContainer1.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/gui/MANUAL_SCREENPresenter.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/manual_screen_screen/MANUAL_SCREENPresenter.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/MANUAL_SCREENView.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/manual_screen_screen/MANUAL_SCREENView.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/gui/Model.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/model/Model.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/gui/STARTING_backgroundPresenter.cpp</name>
+			<name>Application/User/gui/SETUP_SCREENPresenter.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/starting_background_screen/STARTING_backgroundPresenter.cpp</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/setup_screen_screen/SETUP_SCREENPresenter.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/gui/STARTING_backgroundView.cpp</name>
+			<name>Application/User/gui/SETUP_SCREENView.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/starting_background_screen/STARTING_backgroundView.cpp</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/setup_screen_screen/SETUP_SCREENView.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/STARTING_SCREENPresenter.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/starting_screen_screen/STARTING_SCREENPresenter.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/STARTING_SCREENView.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/starting_screen_screen/STARTING_SCREENView.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/ApplicationFontProvider.cpp</name>
@@ -455,6 +485,11 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/VectorFontRendererBuffers.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/AUTOMODE_SCREENViewBase.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/automode_screen_screen/AUTOMODE_SCREENViewBase.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/FrontendApplicationBase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp</locationURI>
@@ -465,9 +500,19 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/containers/CustomContainer1Base.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/STARTING_backgroundViewBase.cpp</name>
+			<name>Application/User/generated/MANUAL_SCREENViewBase.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/starting_background_screen/STARTING_backgroundViewBase.cpp</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/manual_screen_screen/MANUAL_SCREENViewBase.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/SETUP_SCREENViewBase.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/setup_screen_screen/SETUP_SCREENViewBase.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/STARTING_SCREENViewBase.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/starting_screen_screen/STARTING_SCREENViewBase.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/BitmapDatabase.cpp</name>
@@ -493,6 +538,11 @@
 			<name>Application/User/generated/image_alternate_theme_images_widgets_button_icon_rounded_huge_fill_pressed.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_icon_rounded_huge_fill_pressed.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_clay_theme_images_bars_480x272_bottom_floating_base.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_clay_theme_images_bars_480x272_bottom_floating_base.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_icon_theme_images_action_home_filled_50_50_000000.svg.cpp</name>

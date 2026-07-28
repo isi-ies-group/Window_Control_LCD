@@ -6,6 +6,15 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_7R0H" Alignment="Center" TypographyId="Typography1">
+        <Translation Language="GB">AUTOMODE</Translation>
+      </Text>
+      <Text Id="__SingleUse_AUCO" Alignment="Center" TypographyId="Typography1">
+        <Translation Language="GB">SETUP</Translation>
+      </Text>
+      <Text Id="__SingleUse_PXZ7" Alignment="Center" TypographyId="Typography1">
+        <Translation Language="GB">MANUAL MODE</Translation>
+      </Text>
       <Text Id="__SingleUse_4HV7" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">MANUAL MODE</Translation>
       </Text>
