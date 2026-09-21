@@ -33,7 +33,7 @@ protected:
     touchgfx::Box __background;
     touchgfx::Image fondo;
     touchgfx::ScalableImage imagen_fondo_arriba;
-    touchgfx::TextArea WINDOW_CONTROL_TEXT;
+    touchgfx::TextArea SCREEN_MODE_TEXT;
     touchgfx::ScrollableContainer scrollableContainer1;
     touchgfx::ScalableImage fondoCasita;
     touchgfx::ScalableImage iconoCasita;

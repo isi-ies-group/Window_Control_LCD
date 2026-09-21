@@ -22,11 +22,11 @@ SETUP_SCREENViewBase::SETUP_SCREENViewBase() :
     imagen_fondo_arriba.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     add(imagen_fondo_arriba);
 
-    WINDOW_CONTROL_TEXT.setXY(127, 11);
-    WINDOW_CONTROL_TEXT.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    WINDOW_CONTROL_TEXT.setLinespacing(0);
-    WINDOW_CONTROL_TEXT.setTypedText(touchgfx::TypedText(T___SINGLEUSE_AUCO));
-    add(WINDOW_CONTROL_TEXT);
+    SCREEN_MODE_TEXT.setXY(127, 11);
+    SCREEN_MODE_TEXT.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    SCREEN_MODE_TEXT.setLinespacing(0);
+    SCREEN_MODE_TEXT.setTypedText(touchgfx::TypedText(T___SINGLEUSE_AUCO));
+    add(SCREEN_MODE_TEXT);
 
     scrollableContainer1.setPosition(270, 3, 47, 47);
     scrollableContainer1.setScrollbarsColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
@@ -76,7 +76,7 @@ void SETUP_SCREENViewBase::flexButtonCallbackHandler(const touchgfx::AbstractBut
     {
         //GO_HOME
         //When home_button clicked change screen to STARTING_SCREEN
-        //Go to STARTING_SCREEN with no screen transition
-        application().gotoSTARTING_SCREENScreenNoTransition();
+        //Go to STARTING_SCREEN with screen transition towards West
+        application().gotoSTARTING_SCREENScreenSlideTransitionWest();
     }
 }

@@ -18,6 +18,13 @@ STARTING_SCREENViewBase::STARTING_SCREENViewBase() :
     add(fondo);
 
     container_setup.setPosition(59, 104, 215, 51);
+    setup_button.setBoxWithBorderPosition(0, 0, 0, 0);
+    setup_button.setBorderSize(5);
+    setup_button.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    setup_button.setAction(flexButtonCallback);
+    setup_button.setPosition(0, 0, 215, 51);
+    container_setup.add(setup_button);
+
     setup_background.setBitmap(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_HUGE_FILL_ACTION_ID));
     setup_background.setPosition(0, 1, 50, 50);
     setup_background.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
@@ -28,16 +35,16 @@ STARTING_SCREENViewBase::STARTING_SCREENViewBase() :
     icon_setup.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     container_setup.add(icon_setup);
 
-    setup_button.setBitmaps(Bitmap(BITMAP_CARGADOR_ID), Bitmap(BITMAP_TOCAR_ID));
-    setup_button.setBitmapXY(0, 0);
-    setup_button.setVisible(false);
-    setup_button.setAction(flexButtonCallback);
-    setup_button.setPosition(0, 0, 215, 51);
-    container_setup.add(setup_button);
-
     add(container_setup);
 
     container_automode.setPosition(59, 201, 215, 51);
+    automode_button.setBoxWithBorderPosition(0, 0, 0, 0);
+    automode_button.setBorderSize(5);
+    automode_button.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0));
+    automode_button.setAction(flexButtonCallback);
+    automode_button.setPosition(0, 1, 215, 50);
+    container_automode.add(automode_button);
+
     automode_background.setBitmap(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_HUGE_FILL_ACTION_ID));
     automode_background.setPosition(0, 1, 50, 50);
     automode_background.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
@@ -48,15 +55,16 @@ STARTING_SCREENViewBase::STARTING_SCREENViewBase() :
     icon_automode.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     container_automode.add(icon_automode);
 
-    automode_button.setBitmaps(Bitmap(BITMAP_CARGADOR_ID), Bitmap(BITMAP_TOCAR_ID));
-    automode_button.setBitmapXY(0, 0);
-    automode_button.setAction(flexButtonCallback);
-    automode_button.setPosition(-2, 0, 217, 51);
-    container_automode.add(automode_button);
-
     add(container_automode);
 
     container_manual_mode.setPosition(59, 301, 223, 51);
+    manual_button.setBoxWithBorderPosition(0, 0, 0, 0);
+    manual_button.setBorderSize(5);
+    manual_button.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    manual_button.setAction(flexButtonCallback);
+    manual_button.setPosition(0, 0, 223, 51);
+    container_manual_mode.add(manual_button);
+
     manual_background.setBitmap(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUND_HUGE_FILL_ACTION_ID));
     manual_background.setPosition(0, 1, 50, 50);
     manual_background.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
@@ -66,12 +74,6 @@ STARTING_SCREENViewBase::STARTING_SCREENViewBase() :
     icon_manual.setPosition(4, 6, 40, 39);
     icon_manual.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     container_manual_mode.add(icon_manual);
-
-    manual_button.setBitmaps(Bitmap(BITMAP_CARGADOR_ID), Bitmap(BITMAP_TOCAR_ID));
-    manual_button.setBitmapXY(0, 0);
-    manual_button.setAction(flexButtonCallback);
-    manual_button.setPosition(0, 0, 223, 51);
-    container_manual_mode.add(manual_button);
 
     add(container_manual_mode);
 
@@ -111,19 +113,19 @@ STARTING_SCREENViewBase::STARTING_SCREENViewBase() :
 
     add(scrollableContainer1);
 
-    SETUP_TEXT.setPosition(129, 113, 153, 34);
+    SETUP_TEXT.setPosition(129, 113, 145, 36);
     SETUP_TEXT.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     SETUP_TEXT.setLinespacing(0);
     SETUP_TEXT.setTypedText(touchgfx::TypedText(T___SINGLEUSE_L0JY));
     add(SETUP_TEXT);
 
-    MANUAL_MODE_TEXT.setPosition(129, 310, 174, 34);
+    MANUAL_MODE_TEXT.setPosition(129, 310, 153, 36);
     MANUAL_MODE_TEXT.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     MANUAL_MODE_TEXT.setLinespacing(0);
     MANUAL_MODE_TEXT.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4HV7));
     add(MANUAL_MODE_TEXT);
 
-    AUTO_MODE_TEXT.setPosition(129, 212, 163, 30);
+    AUTO_MODE_TEXT.setPosition(129, 212, 145, 28);
     AUTO_MODE_TEXT.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     AUTO_MODE_TEXT.setLinespacing(0);
     AUTO_MODE_TEXT.setTypedText(touchgfx::TypedText(T___SINGLEUSE_7R8Y));
@@ -146,21 +148,21 @@ void STARTING_SCREENViewBase::flexButtonCallbackHandler(const touchgfx::Abstract
     {
         //ENTER_MANUAL
         //When manual_button clicked change screen to MANUAL_SCREEN
-        //Go to MANUAL_SCREEN with no screen transition
-        application().gotoMANUAL_SCREENScreenNoTransition();
+        //Go to MANUAL_SCREEN with screen transition towards East
+        application().gotoMANUAL_SCREENScreenSlideTransitionEast();
     }
     if (&src == &setup_button)
     {
         //ENTER_SETUP
         //When setup_button clicked change screen to SETUP_SCREEN
-        //Go to SETUP_SCREEN with no screen transition
-        application().gotoSETUP_SCREENScreenNoTransition();
+        //Go to SETUP_SCREEN with screen transition towards East
+        application().gotoSETUP_SCREENScreenSlideTransitionEast();
     }
     if (&src == &automode_button)
     {
         //ENTER_AUTOMODE
         //When automode_button clicked change screen to AUTOMODE_SCREEN
-        //Go to AUTOMODE_SCREEN with no screen transition
-        application().gotoAUTOMODE_SCREENScreenNoTransition();
+        //Go to AUTOMODE_SCREEN with screen transition towards East
+        application().gotoAUTOMODE_SCREENScreenSlideTransitionEast();
     }
 }

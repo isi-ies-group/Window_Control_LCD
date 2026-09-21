@@ -21,6 +21,38 @@
             "Height": 51,
             "Components": [
               {
+                "Type": "FlexButton",
+                "Name": "setup_button",
+                "Width": 215,
+                "Height": 51,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "BorderSize": 5,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
+              {
                 "Type": "ScalableImage",
                 "Name": "setup_background",
                 "Y": 1,
@@ -42,23 +74,6 @@
                 "Filename": "__generated\\icon_theme_images_communication_phonelink_setup_50_50_000000.svg.png",
                 "ScalingAlgorithm": "Nearest-neighbor",
                 "Draggable": true
-              },
-              {
-                "Type": "FlexButton",
-                "Name": "setup_button",
-                "Width": 215,
-                "Height": 51,
-                "Visible": false,
-                "ButtonTrigger": {
-                  "Type": "ClickButtonTrigger"
-                },
-                "ButtonStyles": [
-                  {
-                    "Type": "ImageButtonStyle",
-                    "ImageReleased": "cargador.png",
-                    "ImagePressed": "tocar.png"
-                  }
-                ]
               }
             ]
           },
@@ -70,6 +85,22 @@
             "Width": 215,
             "Height": 51,
             "Components": [
+              {
+                "Type": "FlexButton",
+                "Name": "automode_button",
+                "Y": 1,
+                "Width": 215,
+                "Height": 50,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "BorderSize": 5
+                  }
+                ]
+              },
               {
                 "Type": "ScalableImage",
                 "Name": "automode_background",
@@ -92,23 +123,6 @@
                 "Filename": "cargador.png",
                 "ScalingAlgorithm": "Nearest-neighbor",
                 "Draggable": true
-              },
-              {
-                "Type": "FlexButton",
-                "Name": "automode_button",
-                "X": -2,
-                "Width": 217,
-                "Height": 51,
-                "ButtonTrigger": {
-                  "Type": "ClickButtonTrigger"
-                },
-                "ButtonStyles": [
-                  {
-                    "Type": "ImageButtonStyle",
-                    "ImageReleased": "cargador.png",
-                    "ImagePressed": "tocar.png"
-                  }
-                ]
               }
             ]
           },
@@ -120,6 +134,38 @@
             "Width": 223,
             "Height": 51,
             "Components": [
+              {
+                "Type": "FlexButton",
+                "Name": "manual_button",
+                "Width": 223,
+                "Height": 51,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "BorderSize": 5,
+                    "ColorReleased": {
+                      "Green": 102,
+                      "Blue": 153
+                    },
+                    "ColorPressed": {
+                      "Green": 153,
+                      "Blue": 204
+                    },
+                    "ColorBorderReleased": {
+                      "Green": 51,
+                      "Blue": 102
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 51,
+                      "Green": 102,
+                      "Blue": 153
+                    }
+                  }
+                ]
+              },
               {
                 "Type": "ScalableImage",
                 "Name": "manual_background",
@@ -142,22 +188,6 @@
                 "Filename": "haciendo-clic.png",
                 "ScalingAlgorithm": "Nearest-neighbor",
                 "Draggable": true
-              },
-              {
-                "Type": "FlexButton",
-                "Name": "manual_button",
-                "Width": 223,
-                "Height": 51,
-                "ButtonTrigger": {
-                  "Type": "ClickButtonTrigger"
-                },
-                "ButtonStyles": [
-                  {
-                    "Type": "ImageButtonStyle",
-                    "ImageReleased": "cargador.png",
-                    "ImagePressed": "tocar.png"
-                  }
-                ]
               }
             ]
           },
@@ -244,8 +274,8 @@
             "Name": "SETUP_TEXT",
             "X": 129,
             "Y": 113,
-            "Width": 153,
-            "Height": 34,
+            "Width": 145,
+            "Height": 36,
             "TextId": "__SingleUse_L0JY",
             "TextRotation": "0"
           },
@@ -254,8 +284,8 @@
             "Name": "MANUAL_MODE_TEXT",
             "X": 129,
             "Y": 310,
-            "Width": 174,
-            "Height": 34,
+            "Width": 153,
+            "Height": 36,
             "TextId": "__SingleUse_4HV7",
             "TextRotation": "0"
           },
@@ -264,8 +294,8 @@
             "Name": "AUTO_MODE_TEXT",
             "X": 129,
             "Y": 212,
-            "Width": 163,
-            "Height": 30,
+            "Width": 145,
+            "Height": 28,
             "TextId": "__SingleUse_7R8Y",
             "TextRotation": "0"
           }
@@ -279,7 +309,8 @@
             },
             "Action": {
               "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
               "ActionComponent": "MANUAL_SCREEN"
             }
           },
@@ -291,7 +322,8 @@
             },
             "Action": {
               "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
               "ActionComponent": "SETUP_SCREEN"
             }
           },
@@ -303,7 +335,8 @@
             },
             "Action": {
               "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
               "ActionComponent": "AUTOMODE_SCREEN"
             }
           }
@@ -331,7 +364,7 @@
           },
           {
             "Type": "TextArea",
-            "Name": "WINDOW_CONTROL_TEXT",
+            "Name": "AUTOMODE_TEXT",
             "X": 108,
             "Y": 11,
             "Width": 104,
@@ -431,7 +464,8 @@
             },
             "Action": {
               "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
               "ActionComponent": "STARTING_SCREEN"
             }
           }
@@ -459,7 +493,7 @@
           },
           {
             "Type": "TextArea",
-            "Name": "WINDOW_CONTROL_TEXT",
+            "Name": "SCREEN_MODE_TEXT",
             "X": 127,
             "Y": 11,
             "Width": 65,
@@ -559,7 +593,8 @@
             },
             "Action": {
               "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
               "ActionComponent": "STARTING_SCREEN"
             }
           }
@@ -587,7 +622,7 @@
           },
           {
             "Type": "TextArea",
-            "Name": "WINDOW_CONTROL_TEXT",
+            "Name": "MANUAL_MODE_TEXT",
             "X": 89,
             "Y": 11,
             "Width": 143,
@@ -687,24 +722,15 @@
             },
             "Action": {
               "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
               "ActionComponent": "STARTING_SCREEN"
             }
           }
         ]
       }
     ],
-    "CustomContainerDefinitions": [
-      {
-        "Name": "CustomContainer1",
-        "X": 122,
-        "Y": 92,
-        "Width": 68,
-        "Height": 65,
-        "Components": [],
-        "Interactions": []
-      }
-    ],
+    "CustomContainerDefinitions": [],
     "Name": "STM32_LCD_Project",
     "Resolution": {
       "Width": 320,

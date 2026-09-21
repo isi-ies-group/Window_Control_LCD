@@ -50,41 +50,52 @@ void FrontendApplicationBase::gotoSTARTING_SCREENScreenNoTransitionImpl()
     touchgfx::makeTransition<STARTING_SCREENView, STARTING_SCREENPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
-// AUTOMODE_SCREEN
-
-void FrontendApplicationBase::gotoAUTOMODE_SCREENScreenNoTransition()
+void FrontendApplicationBase::gotoSTARTING_SCREENScreenSlideTransitionWest()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoAUTOMODE_SCREENScreenNoTransitionImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoSTARTING_SCREENScreenSlideTransitionWestImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoAUTOMODE_SCREENScreenNoTransitionImpl()
+void FrontendApplicationBase::gotoSTARTING_SCREENScreenSlideTransitionWestImpl()
 {
-    touchgfx::makeTransition<AUTOMODE_SCREENView, AUTOMODE_SCREENPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<STARTING_SCREENView, STARTING_SCREENPresenter, touchgfx::SlideTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// AUTOMODE_SCREEN
+
+void FrontendApplicationBase::gotoAUTOMODE_SCREENScreenSlideTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoAUTOMODE_SCREENScreenSlideTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoAUTOMODE_SCREENScreenSlideTransitionEastImpl()
+{
+    touchgfx::makeTransition<AUTOMODE_SCREENView, AUTOMODE_SCREENPresenter, touchgfx::SlideTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
 // SETUP_SCREEN
 
-void FrontendApplicationBase::gotoSETUP_SCREENScreenNoTransition()
+void FrontendApplicationBase::gotoSETUP_SCREENScreenSlideTransitionEast()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoSETUP_SCREENScreenNoTransitionImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoSETUP_SCREENScreenSlideTransitionEastImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoSETUP_SCREENScreenNoTransitionImpl()
+void FrontendApplicationBase::gotoSETUP_SCREENScreenSlideTransitionEastImpl()
 {
-    touchgfx::makeTransition<SETUP_SCREENView, SETUP_SCREENPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<SETUP_SCREENView, SETUP_SCREENPresenter, touchgfx::SlideTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
 // MANUAL_SCREEN
 
-void FrontendApplicationBase::gotoMANUAL_SCREENScreenNoTransition()
+void FrontendApplicationBase::gotoMANUAL_SCREENScreenSlideTransitionEast()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoMANUAL_SCREENScreenNoTransitionImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoMANUAL_SCREENScreenSlideTransitionEastImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoMANUAL_SCREENScreenNoTransitionImpl()
+void FrontendApplicationBase::gotoMANUAL_SCREENScreenSlideTransitionEastImpl()
 {
-    touchgfx::makeTransition<MANUAL_SCREENView, MANUAL_SCREENPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<MANUAL_SCREENView, MANUAL_SCREENPresenter, touchgfx::SlideTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

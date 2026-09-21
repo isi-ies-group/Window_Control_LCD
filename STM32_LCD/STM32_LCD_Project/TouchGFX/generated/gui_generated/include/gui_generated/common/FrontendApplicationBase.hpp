@@ -23,14 +23,16 @@ public:
     // STARTING_SCREEN
     void gotoSTARTING_SCREENScreenNoTransition();
 
+    void gotoSTARTING_SCREENScreenSlideTransitionWest();
+
     // AUTOMODE_SCREEN
-    void gotoAUTOMODE_SCREENScreenNoTransition();
+    void gotoAUTOMODE_SCREENScreenSlideTransitionEast();
 
     // SETUP_SCREEN
-    void gotoSETUP_SCREENScreenNoTransition();
+    void gotoSETUP_SCREENScreenSlideTransitionEast();
 
     // MANUAL_SCREEN
-    void gotoMANUAL_SCREENScreenNoTransition();
+    void gotoMANUAL_SCREENScreenSlideTransitionEast();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
@@ -40,14 +42,16 @@ protected:
     // STARTING_SCREEN
     void gotoSTARTING_SCREENScreenNoTransitionImpl();
 
+    void gotoSTARTING_SCREENScreenSlideTransitionWestImpl();
+
     // AUTOMODE_SCREEN
-    void gotoAUTOMODE_SCREENScreenNoTransitionImpl();
+    void gotoAUTOMODE_SCREENScreenSlideTransitionEastImpl();
 
     // SETUP_SCREEN
-    void gotoSETUP_SCREENScreenNoTransitionImpl();
+    void gotoSETUP_SCREENScreenSlideTransitionEastImpl();
 
     // MANUAL_SCREEN
-    void gotoMANUAL_SCREENScreenNoTransitionImpl();
+    void gotoMANUAL_SCREENScreenSlideTransitionEastImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

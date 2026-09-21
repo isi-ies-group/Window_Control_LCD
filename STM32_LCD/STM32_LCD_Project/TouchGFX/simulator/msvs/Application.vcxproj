@@ -21,8 +21,6 @@
     <ClCompile Include="..\..\generated\gui_generated\src\common\FrontendApplicationBase.cpp"/>
     <ClCompile Include="..\..\gui\src\model\Model.cpp"/>
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp"/>
-    <ClCompile Include="..\..\gui\src\containers\CustomContainer1.cpp"/>
-    <ClCompile Include="..\..\generated\gui_generated\src\containers\CustomContainer1Base.cpp"/>
     <ClCompile Include="..\..\gui\src\manual_screen_screen\MANUAL_SCREENPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\manual_screen_screen\MANUAL_SCREENView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\manual_screen_screen\MANUAL_SCREENViewBase.cpp"/>
@@ -185,8 +183,6 @@
     <ClInclude Include="..\..\gui\include\gui\model\ModelListener.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp"/>
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\containers\CustomContainer1.hpp"/>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\CustomContainer1Base.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\manual_screen_screen\MANUAL_SCREENPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\manual_screen_screen\MANUAL_SCREENView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\manual_screen_screen\MANUAL_SCREENViewBase.hpp"/>
