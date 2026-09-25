@@ -711,6 +711,134 @@
                 "ImagePressed": "tocar.png"
               }
             ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "go_down",
+            "X": 131,
+            "Y": 314,
+            "Width": 52,
+            "Height": 53,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "__generated\\icon_theme_images_navigation_arrow_downward_50_50_000000.svg.png",
+                "ImagePressed": "__generated\\icon_theme_images_communication_call_made_50_50_000000.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 50,
+                "Height": 50,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Red": 21,
+                  "Green": 255
+                },
+                "ColorPressed": {
+                  "Red": 21,
+                  "Green": 255
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "go_right",
+            "X": 199,
+            "Y": 246,
+            "Width": 52,
+            "Height": 53,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "__generated\\icon_theme_images_navigation_arrow_forward_50_50_000000.svg.png",
+                "ImagePressed": "__generated\\icon_theme_images_communication_call_made_50_50_000000.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 50,
+                "Height": 50,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Red": 21,
+                  "Green": 255
+                },
+                "ColorPressed": {
+                  "Red": 21,
+                  "Green": 255
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "go_up",
+            "X": 131,
+            "Y": 177,
+            "Width": 52,
+            "Height": 53,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "__generated\\icon_theme_images_navigation_arrow_upward_50_50_000000.svg.png",
+                "ImagePressed": "__generated\\icon_theme_images_communication_call_end_50_50_000000.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 50,
+                "Height": 50,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Red": 21,
+                  "Green": 255
+                },
+                "ColorPressed": {
+                  "Red": 21,
+                  "Green": 255
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "go_left",
+            "X": 63,
+            "Y": 246,
+            "Width": 52,
+            "Height": 53,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "ImageButtonStyle",
+                "ImageReleased": "__generated\\icon_theme_images_navigation_arrow_back_50_50_000000.svg.png",
+                "ImagePressed": "__generated\\icon_theme_images_hardware_browser_not_supported_50_50_000000.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 50,
+                "Height": 50,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Red": 21,
+                  "Green": 255
+                },
+                "ColorPressed": {
+                  "Red": 21,
+                  "Green": 255
+                }
+              }
+            ]
           }
         ],
         "Interactions": [
@@ -725,6 +853,28 @@
               "ScreenTransitionType": "ScreenTransitionSlide",
               "ScreenTransitionDirection": "West",
               "ActionComponent": "STARTING_SCREEN"
+            }
+          },
+          {
+            "InteractionName": "PUSH_DOWN",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "go_down"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "LED_OFF"
+            }
+          },
+          {
+            "InteractionName": "PUSH_UP",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "go_up"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "LED_ON"
             }
           }
         ]

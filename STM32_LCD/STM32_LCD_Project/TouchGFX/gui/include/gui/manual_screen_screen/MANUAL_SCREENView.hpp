@@ -11,6 +11,10 @@ public:
     virtual ~MANUAL_SCREENView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+
+//Funciones propias
+    virtual void LED_ON();
+    virtual void LED_OFF();
 protected:
 };
 

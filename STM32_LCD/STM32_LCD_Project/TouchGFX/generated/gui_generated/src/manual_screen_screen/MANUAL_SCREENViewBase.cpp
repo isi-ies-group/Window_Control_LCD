@@ -58,6 +58,40 @@ MANUAL_SCREENViewBase::MANUAL_SCREENViewBase() :
     home_button.setAction(flexButtonCallback);
     home_button.setPosition(270, 1, 50, 51);
     add(home_button);
+
+    go_down.setBoxWithBorderPosition(0, 0, 50, 50);
+    go_down.setBorderSize(5);
+    go_down.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(21, 255, 0), touchgfx::Color::getColorFromRGB(21, 255, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0));
+    go_down.setBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_DOWNWARD_50_50_000000_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_COMMUNICATION_CALL_MADE_50_50_000000_SVG_ID));
+    go_down.setBitmapXY(0, 0);
+    go_down.setAction(flexButtonCallback);
+    go_down.setPosition(131, 314, 52, 53);
+    add(go_down);
+
+    go_right.setBoxWithBorderPosition(0, 0, 50, 50);
+    go_right.setBorderSize(5);
+    go_right.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(21, 255, 0), touchgfx::Color::getColorFromRGB(21, 255, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0));
+    go_right.setBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_FORWARD_50_50_000000_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_COMMUNICATION_CALL_MADE_50_50_000000_SVG_ID));
+    go_right.setBitmapXY(0, 0);
+    go_right.setPosition(199, 246, 52, 53);
+    add(go_right);
+
+    go_up.setBoxWithBorderPosition(0, 0, 50, 50);
+    go_up.setBorderSize(5);
+    go_up.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(21, 255, 0), touchgfx::Color::getColorFromRGB(21, 255, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0));
+    go_up.setBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_UPWARD_50_50_000000_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_COMMUNICATION_CALL_END_50_50_000000_SVG_ID));
+    go_up.setBitmapXY(0, 0);
+    go_up.setAction(flexButtonCallback);
+    go_up.setPosition(131, 177, 52, 53);
+    add(go_up);
+
+    go_left.setBoxWithBorderPosition(0, 0, 50, 50);
+    go_left.setBorderSize(5);
+    go_left.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(21, 255, 0), touchgfx::Color::getColorFromRGB(21, 255, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0));
+    go_left.setBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_BACK_50_50_000000_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_HARDWARE_BROWSER_NOT_SUPPORTED_50_50_000000_SVG_ID));
+    go_left.setBitmapXY(0, 0);
+    go_left.setPosition(63, 246, 52, 53);
+    add(go_left);
 }
 
 MANUAL_SCREENViewBase::~MANUAL_SCREENViewBase()
@@ -78,5 +112,19 @@ void MANUAL_SCREENViewBase::flexButtonCallbackHandler(const touchgfx::AbstractBu
         //When home_button clicked change screen to STARTING_SCREEN
         //Go to STARTING_SCREEN with screen transition towards West
         application().gotoSTARTING_SCREENScreenSlideTransitionWest();
+    }
+    if (&src == &go_down)
+    {
+        //PUSH_DOWN
+        //When go_down clicked call virtual function
+        //Call LED_OFF
+        LED_OFF();
+    }
+    if (&src == &go_up)
+    {
+        //PUSH_UP
+        //When go_up clicked call virtual function
+        //Call LED_ON
+        LED_ON();
     }
 }

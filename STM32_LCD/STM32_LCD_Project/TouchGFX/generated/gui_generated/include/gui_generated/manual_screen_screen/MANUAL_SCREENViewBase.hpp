@@ -22,6 +22,18 @@ public:
     virtual ~MANUAL_SCREENViewBase();
     virtual void setupScreen();
 
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void LED_OFF()
+    {
+        // Override and implement this function in MANUAL_SCREEN
+    }
+    virtual void LED_ON()
+    {
+        // Override and implement this function in MANUAL_SCREEN
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -40,6 +52,10 @@ protected:
     touchgfx::Draggable< touchgfx::ScalableImage > manual_background;
     touchgfx::Draggable< touchgfx::ScalableImage > icon_manual;
     touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  home_button;
+    touchgfx::ImageButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  go_down;
+    touchgfx::ImageButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  go_right;
+    touchgfx::ImageButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  go_up;
+    touchgfx::ImageButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  go_left;
 
 private:
 
