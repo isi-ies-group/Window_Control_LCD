@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="730" viewBox="0 0 1920 730" role="img" aria-labelledby="title desc">
+  <title id="title">Professional tracking results table</title>
+  <desc id="desc">Grouped table for PowerPoint with test case data, interpolated X/Z values, theoretical STM32 X/Z values, measured X/Z values and notes.</desc>
+  <defs>
+    <filter id="softShadow" x="-5%" y="-20%" width="110%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+    <filter id="pillShadow" x="-8%" y="-20%" width="116%" height="150%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="1920" height="730" fill="#ffffff"/>
+  <rect x="60" y="88" width="1866" height="576" rx="22" fill="#ffffff" stroke="#d9e2ef" stroke-width="2" filter="url(#softShadow)"/>
+  <rect x="60" y="88" width="684" height="576" fill="#f7fbff" opacity="0.72"/>
+  <rect x="744" y="88" width="252" height="576" fill="#f4fcf7" opacity="0.72"/>
+  <rect x="996" y="88" width="252" height="576" fill="#fff9ec" opacity="0.72"/>
+  <rect x="1248" y="88" width="224" height="576" fill="#fbf7ff" opacity="0.72"/>
+  <rect x="1472" y="88" width="454" height="576" fill="#f8fafc" opacity="0.72"/>
+  <rect x="60" y="142" width="1866" height="58" fill="#ffffff"/>
+  <rect x="60" y="200" width="1866" height="58" fill="#f8fafc"/>
+  <rect x="60" y="258" width="1866" height="58" fill="#ffffff"/>
+  <rect x="60" y="316" width="1866" height="58" fill="#f8fafc"/>
+  <rect x="60" y="374" width="1866" height="58" fill="#ffffff"/>
+  <rect x="60" y="432" width="1866" height="58" fill="#f8fafc"/>
+  <rect x="60" y="490" width="1866" height="58" fill="#ffffff"/>
+  <rect x="60" y="548" width="1866" height="58" fill="#f8fafc"/>
+  <rect x="60" y="606" width="1866" height="58" fill="#ffffff"/>
+  <rect x="60" y="88" width="1866" height="54" rx="22" fill="#f1f5f9"/>
+  <rect x="60" y="116" width="1866" height="26" fill="#f1f5f9"/>
+  <line x1="60" y1="142" x2="1926" y2="142" stroke="#e2e8f0" stroke-width="1.4"/>
+  <line x1="60" y1="200" x2="1926" y2="200" stroke="#e2e8f0" stroke-width="1.4"/>
+  <line x1="60" y1="258" x2="1926" y2="258" stroke="#e2e8f0" stroke-width="1.4"/>
+  <line x1="60" y1="316" x2="1926" y2="316" stroke="#e2e8f0" stroke-width="1.4"/>
+  <line x1="60" y1="374" x2="1926" y2="374" stroke="#e2e8f0" stroke-width="1.4"/>
+  <line x1="60" y1="432" x2="1926" y2="432" stroke="#e2e8f0" stroke-width="1.4"/>
+  <line x1="60" y1="490" x2="1926" y2="490" stroke="#e2e8f0" stroke-width="1.4"/>
+  <line x1="60" y1="548" x2="1926" y2="548" stroke="#e2e8f0" stroke-width="1.4"/>
+  <line x1="60" y1="606" x2="1926" y2="606" stroke="#e2e8f0" stroke-width="1.4"/>
+  <line x1="60" y1="664" x2="1926" y2="664" stroke="#e2e8f0" stroke-width="1.4"/>
+  <line x1="744" y1="88" x2="744" y2="664" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="996" y1="88" x2="996" y2="664" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="1248" y1="88" x2="1248" y2="664" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="1472" y1="88" x2="1472" y2="664" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="60" y="88" width="1866" height="576" rx="22" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="68" y="28" width="668" height="44" rx="22" fill="#eaf2ff" stroke="#3b82f6" stroke-width="2" filter="url(#pillShadow)"/>
+  <circle cx="90" cy="50" r="6" fill="#3b82f6"/>
+  <text x="402" y="56" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#1d4ed8">Case to study</text>
+  <rect x="752" y="28" width="236" height="44" rx="22" fill="#e9f8ef" stroke="#10b981" stroke-width="2" filter="url(#pillShadow)"/>
+  <circle cx="774" cy="50" r="6" fill="#10b981"/>
+  <text x="870" y="56" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#047857">X/Z interpolation</text>
+  <rect x="1004" y="28" width="236" height="44" rx="22" fill="#fff3df" stroke="#f59e0b" stroke-width="2" filter="url(#pillShadow)"/>
+  <circle cx="1026" cy="50" r="6" fill="#f59e0b"/>
+  <text x="1122" y="56" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#b45309">X/Z theoretical</text>
+  <rect x="1256" y="28" width="208" height="44" rx="22" fill="#f3e8ff" stroke="#8b5cf6" stroke-width="2" filter="url(#pillShadow)"/>
+  <circle cx="1278" cy="50" r="6" fill="#8b5cf6"/>
+  <text x="1360" y="56" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#6d28d9">X/Z measured</text>
+  <rect x="1480" y="28" width="438" height="44" rx="22" fill="#eef2f7" stroke="#64748b" stroke-width="2" filter="url(#pillShadow)"/>
+  <circle cx="1502" cy="50" r="6" fill="#64748b"/>
+  <text x="1699" y="56" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#334155">Notes</text>
+  <text x="97" y="122" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">Case</text>
+  <text x="197" y="122" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">Latitude</text>
+  <text x="323" y="122" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">Longitude</text>
+  <text x="481" y="122" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">Time</text>
+  <text x="618" y="122" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">Tilt</text>
+  <text x="702" y="122" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">Pan</text>
+  <text x="807" y="122" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">X interp</text>
+  <text x="933" y="122" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">Z interp</text>
+  <text x="1059" y="122" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">X STM th</text>
+  <text x="1185" y="122" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">Z STM th</text>
+  <text x="1304" y="122" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">X real</text>
+  <text x="1416" y="122" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">Z real</text>
+  <text x="1699" y="122" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">Notes</text>
+  <text x="97" y="178" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">1</text>
+  <text x="197" y="178" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">40.43</text>
+  <text x="323" y="178" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">-3.73</text>
+  <text x="481" y="165" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="500" fill="#0f172a">2026-07-09</text>
+  <text x="481" y="187" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="500" fill="#475569">12:17 +02:00</text>
+  <text x="618" y="178" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">0</text>
+  <text x="702" y="178" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">180</text>
+  <text x="807" y="178" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#047857">15.5</text>
+  <text x="933" y="178" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#047857">58.9</text>
+  <text x="1059" y="178" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#b45309">15.5</text>
+  <text x="1185" y="178" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#b45309">58.9</text>
+  <text x="1304" y="178" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#6d28d9">15</text>
+  <text x="1416" y="178" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#6d28d9">59</text>
+  <rect x="1665" y="156" width="68" height="30" rx="15" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="1699" y="177" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#166534">OK</text>
+  <text x="97" y="236" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">2</text>
+  <text x="197" y="236" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">40.43</text>
+  <text x="323" y="236" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">-3.73</text>
+  <text x="481" y="223" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="500" fill="#0f172a">2026-07-09</text>
+  <text x="481" y="245" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="500" fill="#475569">13:29 +02:00</text>
+  <text x="618" y="236" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">0</text>
+  <text x="702" y="236" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">180</text>
+  <text x="807" y="236" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#047857">22.3</text>
+  <text x="933" y="236" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#047857">72</text>
+  <text x="1059" y="236" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#b45309">22.3</text>
+  <text x="1185" y="236" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#b45309">72</text>
+  <text x="1304" y="236" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#6d28d9">22</text>
+  <text x="1416" y="236" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#6d28d9">72</text>
+  <rect x="1665" y="214" width="68" height="30" rx="15" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="1699" y="235" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#166534">OK</text>
+  <text x="97" y="294" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">3</text>
+  <text x="197" y="294" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">40.43</text>
+  <text x="323" y="294" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">-3.73</text>
+  <text x="481" y="281" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="500" fill="#0f172a">2026-07-09</text>
+  <text x="481" y="303" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="500" fill="#475569">14:18 +02:00</text>
+  <text x="618" y="294" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">0</text>
+  <text x="702" y="294" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">180</text>
+  <text x="807" y="294" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#047857">23.9</text>
+  <text x="933" y="294" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#047857">74.8</text>
+  <text x="1059" y="294" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#b45309">23.9</text>
+  <text x="1185" y="294" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#b45309">74.8</text>
+  <text x="1304" y="294" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#6d28d9">24</text>
+  <text x="1416" y="294" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#6d28d9">73</text>
+  <rect x="1535" y="271" width="328" height="32" rx="16" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="1699" y="293" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#92400e">Z mechanical limit around 73 mm</text>
+  <text x="97" y="352" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">4</text>
+  <text x="197" y="352" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">40.43</text>
+  <text x="323" y="352" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">-3.73</text>
+  <text x="481" y="339" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="500" fill="#0f172a">2026-07-09</text>
+  <text x="481" y="361" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="500" fill="#475569">15:46 +02:00</text>
+  <text x="618" y="352" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">0</text>
+  <text x="702" y="352" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">180</text>
+  <text x="807" y="352" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#047857">19.9</text>
+  <text x="933" y="352" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#047857">67.2</text>
+  <text x="1059" y="352" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#b45309">19.9</text>
+  <text x="1185" y="352" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#b45309">67.2</text>
+  <text x="1304" y="352" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#6d28d9">20</text>
+  <text x="1416" y="352" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#6d28d9">67</text>
+  <rect x="1665" y="330" width="68" height="30" rx="15" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="1699" y="351" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#166534">OK</text>
+  <text x="97" y="410" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">5</text>
+  <text x="197" y="410" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">51.51</text>
+  <text x="323" y="410" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">-0.13</text>
+  <text x="481" y="397" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="500" fill="#0f172a">2026-07-10</text>
+  <text x="481" y="419" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="500" fill="#475569">08:04 +01:00</text>
+  <text x="618" y="410" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">15</text>
+  <text x="702" y="410" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">180</text>
+  <text x="807" y="410" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#047857">4.2</text>
+  <text x="933" y="410" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#047857">29</text>
+  <text x="1059" y="410" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#b45309">4.2</text>
+  <text x="1185" y="410" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#b45309">29.1</text>
+  <text x="1304" y="410" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#6d28d9">4</text>
+  <text x="1416" y="410" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#6d28d9">29</text>
+  <rect x="1665" y="388" width="68" height="30" rx="15" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="1699" y="409" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#166534">OK</text>
+  <text x="97" y="468" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">6</text>
+  <text x="197" y="468" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">51.51</text>
+  <text x="323" y="468" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">-0.13</text>
+  <text x="481" y="455" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="500" fill="#0f172a">2026-07-10</text>
+  <text x="481" y="477" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="500" fill="#475569">09:46 +01:00</text>
+  <text x="618" y="468" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">15</text>
+  <text x="702" y="468" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">180</text>
+  <text x="807" y="468" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#047857">4.9</text>
+  <text x="933" y="468" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#047857">31.6</text>
+  <text x="1059" y="468" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#b45309">4.9</text>
+  <text x="1185" y="468" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#b45309">31.6</text>
+  <text x="1304" y="468" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#6d28d9">5</text>
+  <text x="1416" y="468" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#6d28d9">32</text>
+  <rect x="1665" y="446" width="68" height="30" rx="15" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="1699" y="467" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#166534">OK</text>
+  <text x="97" y="526" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">7</text>
+  <text x="197" y="526" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">51.51</text>
+  <text x="323" y="526" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">-0.13</text>
+  <text x="481" y="513" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="500" fill="#0f172a">2026-07-10</text>
+  <text x="481" y="535" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="500" fill="#475569">09:54 +01:00</text>
+  <text x="618" y="526" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">15</text>
+  <text x="702" y="526" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">180</text>
+  <text x="807" y="526" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#047857">39.2</text>
+  <text x="933" y="526" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#047857">21.9</text>
+  <text x="1059" y="526" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#b45309">39.2</text>
+  <text x="1185" y="526" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#b45309">21.9</text>
+  <text x="1304" y="526" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#6d28d9">39</text>
+  <text x="1416" y="526" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#6d28d9">22</text>
+  <rect x="1665" y="504" width="68" height="30" rx="15" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="1699" y="525" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#166534">OK</text>
+  <text x="97" y="584" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">8</text>
+  <text x="197" y="584" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">40.43</text>
+  <text x="323" y="584" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">-3.73</text>
+  <text x="481" y="571" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="500" fill="#0f172a">2026-07-10</text>
+  <text x="481" y="593" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="500" fill="#475569">12:46 +02:00</text>
+  <text x="618" y="584" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">90</text>
+  <text x="702" y="584" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">160</text>
+  <text x="807" y="584" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#047857">33.2</text>
+  <text x="933" y="584" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#047857">16.2</text>
+  <text x="1059" y="584" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#b45309">33.2</text>
+  <text x="1185" y="584" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#b45309">16.2</text>
+  <text x="1304" y="584" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#6d28d9">33</text>
+  <text x="1416" y="584" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#6d28d9">16</text>
+  <rect x="1665" y="562" width="68" height="30" rx="15" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="1699" y="583" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#166534">OK</text>
+  <text x="97" y="642" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">9</text>
+  <text x="197" y="642" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">40.43</text>
+  <text x="323" y="642" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">-3.73</text>
+  <text x="481" y="629" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="500" fill="#0f172a">2026-07-10</text>
+  <text x="481" y="651" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="17" font-weight="500" fill="#475569">14:12 +02:00</text>
+  <text x="618" y="642" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">90</text>
+  <text x="702" y="642" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#0f172a">160</text>
+  <text x="807" y="642" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#047857">46.2</text>
+  <text x="933" y="642" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#047857">26.5</text>
+  <text x="1059" y="642" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#b45309">46.2</text>
+  <text x="1185" y="642" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500" fill="#b45309">26.4</text>
+  <text x="1304" y="642" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#6d28d9">46</text>
+  <text x="1416" y="642" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#6d28d9">26</text>
+  <rect x="1521" y="619" width="356" height="32" rx="16" fill="#ede9fe" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="1699" y="641" text-anchor="middle" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#5b21b6">Lower-left belt/slider lost steps</text>
+  <text x="60" y="698" text-anchor="start" font-family="Aptos, Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#64748b">Position values in mm. Time is local time for each test case.</text>
+</svg>

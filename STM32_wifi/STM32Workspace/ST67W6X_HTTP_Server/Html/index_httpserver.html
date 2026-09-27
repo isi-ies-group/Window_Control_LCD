@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>HTTP Server example with STM32</title>
+    <title>Window Control WiFi</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -28,44 +28,29 @@
             margin-left: calc(var(--background-margin) + 2vw);
         }
 
-        header,
-        footer {
-            background: var(--dark-blue);
-            color: #ffffff;
-            margin: 0;
-        }
-
         header {
+            align-items: center;
+            background: var(--dark-blue);
+            box-sizing: border-box;
+            color: #ffffff;
+            display: flex;
             height: 8vh;
-            white-space: nowrap;
-            overflow-x: auto;
+            min-height: 84px;
+            margin: 0;
+            overflow-x: hidden;
             overflow-y: hidden;
+            padding: 10px calc(var(--background-margin) + 2vw);
+            white-space: nowrap;
         }
 
         #header_logo {
-            height: 8vh;
-        }
-
-        footer {
-            height: 4vh;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            padding: 1vh;
-        }
-
-        a:link {
-            color: var(--light-blue);
-            text-decoration: none;
-        }
-
-        a:visited {
-            color: var(--pink);
-        }
-
-        a:hover,
-        a:focus {
-            text-decoration: underline;
+            background: #ffffff;
+            box-sizing: border-box;
+            height: 64px;
+            max-width: 220px;
+            object-fit: contain;
+            padding: 6px 10px;
+            width: auto;
         }
 
         button {
@@ -85,32 +70,6 @@
             border-radius: 10px;
         }
 
-        .button-on-green {
-            background-color: #49b171;
-            color: black;
-        }
-
-        .button-on-red {
-            background-color: #e3381b;
-            color: black;
-        }
-
-        .button-off {
-            background-color: #d1d1d1;
-            color: black;
-        }
-
-        .console {
-            background-color: black;
-            color: white;
-            font-family: monospace;
-            font-size: 14px;
-            padding: 10px;
-            max-height: 200px;
-            overflow: auto;
-            margin-right: calc(var(--background-margin) + 2vw);
-        }
-		
 		.config-panel {
 			background: white;
 			display: inline-block;
@@ -138,6 +97,24 @@
 			cursor: pointer;
 			font-size: 14px;
 		}
+
+        .auto-btn {
+            background-color: #28a745;
+            font-size: 20px;
+            padding: 15px 40px;
+            margin-top: 25px;
+        }
+
+        .auto-btn.active {
+            background-color: #dc3545 !important;
+        }
+
+        .sync-btn {
+            background-color: #0078D7;
+            font-size: 20px;
+            padding: 15px 40px;
+            margin-top: 25px;
+        }
 		
         .status-panel {
             background-color: #f5f8fb;
@@ -159,12 +136,80 @@
             margin-left: 0;
         }
 
+        .status-item.wide {
+            grid-column: 1 / -1;
+            word-break: break-all;
+        }
+
         .status-label {
             font-weight: bold;
         }
 
         .status-value {
             font-family: monospace;
+        }
+
+        .alarm-panel {
+            border-left-color: #c00000;
+        }
+
+        .movement-parameters-panel {
+            border-left-color: #0078D7;
+        }
+
+        .movement-form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(240px, 1fr));
+            gap: 10px 16px;
+            margin: 16px 0 0 0;
+        }
+
+        .movement-form {
+            background: #ffffff;
+            border: 1px solid #d8e4ef;
+            border-radius: 8px;
+            box-sizing: border-box;
+            margin-left: 0;
+            padding: 10px;
+        }
+
+        .movement-form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .movement-form input[type="text"] {
+            border: 1px solid #b7c8d8;
+            border-radius: 5px;
+            box-sizing: border-box;
+            padding: 6px;
+            width: 120px;
+        }
+
+        .movement-form input[type="submit"] {
+            background-color: #0078D7;
+            border: none;
+            border-radius: 6px;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 6px;
+            padding: 7px 12px;
+        }
+
+        .alarm-reset-btn {
+            background-color: #c00000;
+            font-size: 20px;
+            padding: 15px 40px;
+            margin-top: 20px;
+        }
+
+        button:disabled,
+        input:disabled,
+        select:disabled {
+            cursor: not-allowed;
+            opacity: 0.45;
         }
     </style>
 </head>
@@ -179,15 +224,15 @@
 		<h2>Initial Configuration</h2>
 		<div class="config-panel">
 			<form action="/config_submit" method="get">
-				Latitude: <input type="text" name="latitude"><br>
-				Longitude: <input type="text" name="longitude"><br>
-				Pan: <input type="text" name="pan"><br>
-				Tilt: <input type="text" name="tilt"><br>
+				Latitude: <input class="config-control" type="text" name="latitude"><br>
+				Longitude: <input class="config-control" type="text" name="longitude"><br>
+				Pan: <input class="config-control" type="text" name="pan"><br>
+				Tilt: <input class="config-control" type="text" name="tilt"><br>
 				Tilt correction:
-				<input type="checkbox" name="tilt_correction" value="1"> Enable<br>
+				<input class="config-control" type="checkbox" name="tilt_correction" value="1"> Enable<br>
 
 				Country:
-				<select name="country">
+				<select class="config-control" name="country">
 					<option value="">-- Select --</option>
 					<option value="Spain">Spain</option>
 					<option value="Spain_Canary">Spain (Canary)</option>
@@ -196,51 +241,246 @@
 					<option value="Argentina">Argentina</option>
 				</select><br>
 
-				<button type="button" onclick="location.href='/config_begin'">Begin</button>
-				<input type="submit" value="Submit">
-				<button type="button" onclick="location.href='/end_config'">End</button>
+				<input class="config-control" type="submit" value="Submit">
 			</form>
 		</div>
 
-        <h2>LED Control</h2>
-        <div>
-            <button class="button" onclick="sendGetRequest('LedGreen')" id="LedGreen">LED Green</button>
-            <button class="button" onclick="sendGetRequest('LedRed')" id="LedRed">LED Red</button>
-        </div>
-        <h2>User button status</h2>
-        <div>
-            <p class="button" id="user_btn">User Button State</p>
-        </div>
-        <h2>Automatic mode status</h2>
+		<!-- SECTION 2: Manual Date & Time -->
+		<h2>Manual Date &amp; Time</h2>
+		<div class="config-panel">
+			<form action="/set_datetime" method="get">
+				Date (YYYY-MM-DD): <input class="time-control" type="text" name="date" placeholder="2026-01-20"><br>
+				Time (HH:MM:SS): <input class="time-control" type="text" name="time" placeholder="11:44:15"><br>
+				<input class="time-control" type="submit" value="Set Date & Time">
+			</form>
+		</div>
+
+		<!-- SECTION 2: Ephemeris Input -->
+		<h2>Ephemeris Input</h2>
+		<div class="config-panel">
+			<form action="/eph_submit" method="get">
+				Azimuth: <input class="eph-control" type="text" name="azimuth"><br>
+				Elevation: <input class="eph-control" type="text" name="elevation"><br>
+				<button id="ephBeginBtn" type="button" onclick="location.href='/eph_begin'">Begin</button>
+				<input class="eph-control" type="submit" value="Submit">
+				<button id="ephEndBtn" class="eph-control" type="button" onclick="location.href='/end_eph'">End</button>
+			</form>
+		</div>
+
+		<!-- SECTION 3: Manual Mode -->
+		<h2>Manual Mode</h2>
+		<div class="config-panel">
+			<form action="/manual_goto" method="get">
+				X target: <input class="manual-control" type="text" name="x"><br>
+				Z target: <input class="manual-control" type="text" name="z"><br>
+				<button id="manualBeginBtn" type="button" onclick="location.href='/manual_begin'">Begin</button>
+				<input class="manual-control" type="submit" value="Go to X / Z">
+				<button id="manualEndBtn" class="manual-control" type="button" onclick="location.href='/end_manual'">End</button>
+			</form>
+		</div>
+
+        <br><br>
+        <button id="syncTimeBtn" class="button sync-btn" onclick="syncTime()">SYNC TIME</button>
+        <button id="homeBtn" class="button" onclick="home()">HOME</button>
+        <button id="autoBtn" class="button auto-btn" onclick="toggleAutoMode()">AUTO MODE</button>
+
+		<!-- SECTION 4: WiFi power test -->
+		<h2>WiFi Power Test</h2>
+		<div class="config-panel">
+			<form action="/shutdown_submit" method="get">
+				<input type="submit" value="WIFI OFF TEST">
+			</form>
+		</div>
+
+        <h2>Test status</h2>
         <div class="status-panel">
             <div class="status-grid">
-                <div class="status-item"><span class="status-label">Mode:</span> <span class="status-value" id="auto_mode">---</span></div>
-                <div class="status-item"><span class="status-label">Country:</span> <span class="status-value" id="auto_country">---</span></div>
-                <div class="status-item"><span class="status-label">Latitude:</span> <span class="status-value" id="auto_latitude">---</span></div>
-                <div class="status-item"><span class="status-label">Longitude:</span> <span class="status-value" id="auto_longitude">---</span></div>
-                <div class="status-item"><span class="status-label">Pan:</span> <span class="status-value" id="auto_pan">---</span></div>
-                <div class="status-item"><span class="status-label">Tilt:</span> <span class="status-value" id="auto_tilt">---</span></div>
-                <div class="status-item"><span class="status-label">Tilt correction:</span> <span class="status-value" id="auto_tilt_correction">---</span></div>
-                <div class="status-item"><span class="status-label">Dummy:</span> <span class="status-value" id="auto_dummy">---</span></div>
-                <div class="status-item"><span class="status-label">Local date:</span> <span class="status-value" id="auto_date">---</span></div>
-                <div class="status-item"><span class="status-label">Local time:</span> <span class="status-value" id="auto_time">---</span></div>
-                <div class="status-item"><span class="status-label">X position:</span> <span class="status-value" id="auto_x">---</span></div>
-                <div class="status-item"><span class="status-label">Z position:</span> <span class="status-value" id="auto_z">---</span></div>
+                <div class="status-item"><span class="status-label">FSM:</span> <span class="status-value" id="fsm_state">---</span></div>
+                <div class="status-item"><span class="status-label">Auto on:</span> <span class="status-value" id="auto_on">---</span></div>
+                <div class="status-item"><span class="status-label">Auto counter:</span> <span class="status-value" id="auto_counter">---</span></div>
+                <div class="status-item"><span class="status-label">RTC date:</span> <span class="status-value" id="rtc_date">---</span></div>
+                <div class="status-item"><span class="status-label">RTC time:</span> <span class="status-value" id="rtc_time">---</span></div>
+                <div class="status-item"><span class="status-label">Manual time:</span> <span class="status-value" id="manual_time">---</span></div>
+                <div class="status-item"><span class="status-label">Country:</span> <span class="status-value" id="country">---</span></div>
+                <div class="status-item"><span class="status-label">Latitude:</span> <span class="status-value" id="latitude">---</span></div>
+                <div class="status-item"><span class="status-label">Longitude:</span> <span class="status-value" id="longitude">---</span></div>
+                <div class="status-item"><span class="status-label">Pan:</span> <span class="status-value" id="pan">---</span></div>
+                <div class="status-item"><span class="status-label">Tilt:</span> <span class="status-value" id="tilt">---</span></div>
+                <div class="status-item"><span class="status-label">Tilt correction:</span> <span class="status-value" id="tilt_correction">---</span></div>
+                <div class="status-item"><span class="status-label">Azimuth:</span> <span class="status-value" id="azimuth">---</span></div>
+                <div class="status-item"><span class="status-label">Elevation:</span> <span class="status-value" id="elevation">---</span></div>
+                <div class="status-item"><span class="status-label">AOIl:</span> <span class="status-value" id="aoil">---</span></div>
+                <div class="status-item"><span class="status-label">AOIt:</span> <span class="status-value" id="aoit">---</span></div>
+                <div class="status-item"><span class="status-label">Query AOIl:</span> <span class="status-value" id="query_aoil">---</span></div>
+                <div class="status-item"><span class="status-label">Query AOIt:</span> <span class="status-value" id="query_aoit">---</span></div>
+                <div class="status-item"><span class="status-label">Interp X:</span> <span class="status-value" id="interp_x">---</span></div>
+                <div class="status-item"><span class="status-label">Interp Z:</span> <span class="status-value" id="interp_z">---</span></div>
+                <div class="status-item"><span class="status-label">Target X:</span> <span class="status-value" id="x_target">---</span></div>
+                <div class="status-item"><span class="status-label">Target Z:</span> <span class="status-value" id="z_target">---</span></div>
+                <div class="status-item"><span class="status-label">Accepted X:</span> <span class="status-value" id="x">---</span></div>
+                <div class="status-item"><span class="status-label">Accepted Z:</span> <span class="status-value" id="z">---</span></div>
+                <div class="status-item"><span class="status-label">Valid NMEA time:</span> <span class="status-value" id="gps_nmea">---</span></div>
+                <div class="status-item wide"><span class="status-label">Last RMC raw:</span> <span class="status-value" id="gps_last_rmc">---</span></div>
             </div>
         </div>
-        <h2>Console</h2>
-        <div>
-            <p class="console" id="console"></p>
+
+        <h2>Movement parameters</h2>
+        <div class="status-panel movement-parameters-panel">
+            <div class="status-grid">
+                <div class="status-item"><span class="status-label">X gain:</span> <span class="status-value" id="vertical_movement_gain">---</span></div>
+                <div class="status-item"><span class="status-label">X offset (mm):</span> <span class="status-value" id="vertical_movement_offset">---</span></div>
+                <div class="status-item"><span class="status-label">Z gain:</span> <span class="status-value" id="movement_gain">---</span></div>
+                <div class="status-item"><span class="status-label">Z offset (mm):</span> <span class="status-value" id="movement_offset">---</span></div>
+                <div class="status-item"><span class="status-label">X range (mm):</span> <span class="status-value" id="movement_max_x">---</span></div>
+                <div class="status-item"><span class="status-label">Z range (mm):</span> <span class="status-value" id="movement_max_z">---</span></div>
+                <div class="status-item"><span class="status-label">Movement speed (us):</span> <span class="status-value" id="movement_speed">---</span></div>
+                <div class="status-item"><span class="status-label">Home speed (us):</span> <span class="status-value" id="movement_home_speed">---</span></div>
+            </div>
+
+            <div class="movement-form-grid">
+                <form class="movement-form" action="/vertical_movement_gain_submit" method="get">
+                    <label>X gain</label>
+                    <input type="text" name="gain" placeholder="0.000000">
+                    <input type="submit" value="Save">
+                </form>
+                <form class="movement-form" action="/vertical_movement_offset_submit" method="get">
+                    <label>X offset (mm)</label>
+                    <input type="text" name="offset" placeholder="0.000">
+                    <input type="submit" value="Save">
+                </form>
+                <form class="movement-form" action="/movement_gain_submit" method="get">
+                    <label>Z gain</label>
+                    <input type="text" name="gain" placeholder="0.053333">
+                    <input type="submit" value="Save">
+                </form>
+                <form class="movement-form" action="/movement_offset_submit" method="get">
+                    <label>Z offset (mm)</label>
+                    <input type="text" name="offset" placeholder="0.000">
+                    <input type="submit" value="Save">
+                </form>
+                <form class="movement-form" action="/movement_x_range_submit" method="get">
+                    <label>X range (mm)</label>
+                    <input type="text" name="x_range" placeholder="55.000">
+                    <input type="submit" value="Save">
+                </form>
+                <form class="movement-form" action="/movement_z_range_submit" method="get">
+                    <label>Z range (mm)</label>
+                    <input type="text" name="z_range" placeholder="72.000">
+                    <input type="submit" value="Save">
+                </form>
+                <form class="movement-form" action="/movement_speed_submit" method="get">
+                    <label>Movement speed (us)</label>
+                    <input type="text" name="movement_speed" placeholder="600">
+                    <input type="submit" value="Save">
+                </form>
+                <form class="movement-form" action="/movement_home_speed_submit" method="get">
+                    <label>Home speed (us)</label>
+                    <input type="text" name="home_speed" placeholder="1000">
+                    <input type="submit" value="Save">
+                </form>
+            </div>
         </div>
-        <!-- <footer></footer> -->
+
+        <h2>ALARM</h2>
+        <div class="status-panel alarm-panel">
+            <div class="status-grid">
+                <div class="status-item"><span class="status-label">Any alarm:</span> <span class="status-value" id="any_movement_alarm">---</span></div>
+                <div class="status-item"><span class="status-label">Vertical top right:</span> <span class="status-value" id="vertical_top_right_alarm">---</span></div>
+                <div class="status-item"><span class="status-label">Vertical top left:</span> <span class="status-value" id="vertical_top_left_alarm">---</span></div>
+                <div class="status-item"><span class="status-label">Horizontal interior left:</span> <span class="status-value" id="horizontal_interior_left_alarm">---</span></div>
+                <div class="status-item"><span class="status-label">Horizontal interior right:</span> <span class="status-value" id="horizontal_interior_right_alarm">---</span></div>
+                <div class="status-item"><span class="status-label">Vertical bottom left:</span> <span class="status-value" id="vertical_bottom_left_alarm">---</span></div>
+                <div class="status-item"><span class="status-label">Vertical bottom right:</span> <span class="status-value" id="vertical_bottom_right_alarm">---</span></div>
+                <div class="status-item"><span class="status-label">Horizontal exterior left:</span> <span class="status-value" id="horizontal_exterior_left_alarm">---</span></div>
+                <div class="status-item"><span class="status-label">Horizontal exterior right:</span> <span class="status-value" id="horizontal_exterior_right_alarm">---</span></div>
+            </div>
+        </div>
+
+        <button id="resetAlarmBtn" class="button alarm-reset-btn" onclick="resetAlarm()">RESET ALARM</button>
 </body>
 <script>
-    function writeConsole(line) {
-        document.getElementById("console").innerHTML = "> " + line + " <br />" + document.getElementById("console").innerHTML;
+    let autoStatusTimer = null;
+    let statusRequestInFlight = false;
+    let statusPollFailureCount = 0;
+    let autoMode = false;
+    const autoStatusPollMs = 2000;
+    const autoStatusBackoffMaxMs = 15000;
+    const autoStatusHiddenPollMs = 15000;
+
+    function scheduleAutoStatusPoll(delayMs) {
+        if (autoStatusTimer !== null) {
+            return;
+        }
+        autoStatusTimer = setTimeout(function () {
+            autoStatusTimer = null;
+            sendStatusGetRequest();
+        }, delayMs);
+    }
+
+    function finishStatusPoll(success) {
+        if (!statusRequestInFlight) {
+            return;
+        }
+
+        statusRequestInFlight = false;
+
+        if (success) {
+            statusPollFailureCount = 0;
+            scheduleAutoStatusPoll(document.hidden ? autoStatusHiddenPollMs : autoStatusPollMs);
+            return;
+        }
+
+        statusPollFailureCount = Math.min(statusPollFailureCount + 1, 4);
+        const retryDelay = Math.min(autoStatusPollMs * Math.pow(2, statusPollFailureCount),
+                                    autoStatusBackoffMaxMs);
+        scheduleAutoStatusPoll(document.hidden ? autoStatusHiddenPollMs : retryDelay);
     }
 
     function setText(id, value) {
-        document.getElementById(id).textContent = value;
+        const element = document.getElementById(id);
+        if (element !== null) {
+            element.textContent = value;
+        }
+    }
+
+    function setDisabled(selector, disabled) {
+        document.querySelectorAll(selector).forEach(function (element) {
+            element.disabled = disabled;
+        });
+    }
+
+    function setElementDisabled(id, disabled) {
+        const element = document.getElementById(id);
+        if (element !== null) {
+            element.disabled = disabled;
+        }
+    }
+
+    function setInterfaceForState(state) {
+        const isStandby = state === "STDBY";
+        const isAuto = state === "AUTO_MODE";
+        const isEph = state === "EPH_INPUT";
+        const isManual = state === "MANUAL";
+        const isKnownState = isStandby || isAuto || isEph || isManual;
+
+        setDisabled(".config-control", !isStandby);
+        setDisabled(".movement-config-control", !isStandby);
+        setDisabled(".time-control", !isStandby);
+        setDisabled(".eph-control", !isEph);
+        setDisabled(".manual-control", !isManual);
+
+        setElementDisabled("ephBeginBtn", !isKnownState || isAuto || isEph);
+        setElementDisabled("manualBeginBtn", !isKnownState || isAuto || isManual);
+        setElementDisabled("autoBtn", !isKnownState || !(isStandby || isAuto));
+        setElementDisabled("syncTimeBtn", !isKnownState || !(isStandby || isAuto));
+        setElementDisabled("homeBtn", !isKnownState);
+    }
+
+    function setAutoButton(enabled) {
+        autoMode = enabled;
+        const autoBtn = document.getElementById("autoBtn");
+        autoBtn.classList.toggle("active", enabled);
+        autoBtn.innerText = enabled ? "STOP AUTO" : "AUTO MODE";
     }
 
     function formatNumber(value, digits) {
@@ -251,128 +491,174 @@
         return "---";
     }
 
-    function sendPeriodicGetRequest(val) {
-
-        var xhr = new XMLHttpRequest();
-        xhr.timeout = 13000;
-        xhr.open("GET", "/pins_status", true);
-        xhr.ontimeout = function () {
-            setTimeout(sendPeriodicGetRequest, 200);
+    function formatCounter(value) {
+        var numberValue = Number(value);
+        if (Number.isFinite(numberValue)) {
+            return String(Math.trunc(numberValue));
         }
-        xhr.onerror = function () {
-            setTimeout(sendPeriodicGetRequest, 200);
-        }
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                const resp = JSON.parse(xhr.responseText);
-                writeConsole("Board pins status : " + xhr.responseText);
-
-                switch_color(resp.BtnPin, "user_btn", "green");
-                switch_name(resp.BtnPin, "user_btn");
-                switch_color(resp.LedGreenPin, "LedGreen", "green");
-                switch_color(resp.LedRedPin, "LedRed", "red");
-                setTimeout(sendPeriodicGetRequest, 200);
-            }
-            else if (xhr.readyState === 4 && xhr.status == 404) {
-                setTimeout(sendPeriodicGetRequest, 200);
-            }
-        };
-        xhr.send();
+        return "---";
     }
-    sendPeriodicGetRequest();
 
     function sendStatusGetRequest() {
+        if (statusRequestInFlight) {
+            return;
+        }
+
+        statusRequestInFlight = true;
+
         var xhr = new XMLHttpRequest();
         xhr.timeout = 3000;
         xhr.open("GET", "/status", true);
         xhr.ontimeout = function () {
-            setTimeout(sendStatusGetRequest, 1000);
+            finishStatusPoll(false);
         }
         xhr.onerror = function () {
-            setTimeout(sendStatusGetRequest, 1000);
+            finishStatusPoll(false);
         }
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
-                const resp = JSON.parse(xhr.responseText);
-                setText("auto_mode", resp.auto_on ? "ON" : "OFF");
-                setText("auto_country", resp.country || "---");
-                setText("auto_latitude", formatNumber(resp.latitude, 2));
-                setText("auto_longitude", formatNumber(resp.longitude, 2));
-                setText("auto_pan", formatNumber(resp.pan, 2));
-                setText("auto_tilt", formatNumber(resp.tilt, 2));
-                setText("auto_tilt_correction", resp.tilt_correction ? "Enabled" : "Disabled");
-                setText("auto_dummy", resp.dummy);
-                setText("auto_date", resp.date || "---");
-                setText("auto_time", resp.time || "---");
-                setText("auto_x", formatNumber(resp.x, 6));
-                setText("auto_z", formatNumber(resp.z, 6));
-                setTimeout(sendStatusGetRequest, 1000);
+                try {
+                    const resp = JSON.parse(xhr.responseText);
+                    setAutoButton(resp.auto_on);
+                    setInterfaceForState(resp.fsm_state);
+                    setText("fsm_state", resp.fsm_state || "---");
+                    setText("auto_on", resp.auto_on ? "true" : "false");
+                    setText("auto_counter", resp.auto_counter);
+                    setText("rtc_date", resp.rtc_date || "---");
+                    setText("rtc_time", resp.rtc_time || "---");
+                    setText("manual_time", resp.manual_time ? "true" : "false");
+                    setText("country", resp.country || "---");
+                    setText("latitude", formatNumber(resp.latitude, 2));
+                    setText("longitude", formatNumber(resp.longitude, 2));
+                    setText("pan", formatNumber(resp.pan, 2));
+                    setText("tilt", formatNumber(resp.tilt, 2));
+                    setText("tilt_correction", resp.tilt_correction ? "true" : "false");
+                    setText("movement_gain", formatNumber(resp.movement_gain, 6));
+                    setText("movement_offset", formatNumber(resp.movement_offset, 3));
+                    setText("vertical_movement_gain", formatNumber(resp.vertical_movement_gain, 6));
+                    setText("vertical_movement_offset", formatNumber(resp.vertical_movement_offset, 3));
+                    setText("movement_max_x", formatNumber(resp.movement_max_x, 3));
+                    setText("movement_max_z", formatNumber(resp.movement_max_z, 3));
+                    setText("movement_speed", resp.movement_speed);
+                    setText("movement_home_speed", resp.movement_home_speed);
+                    setText("any_movement_alarm", resp.any_movement_alarm ? "true" : "false");
+                    setText("vertical_top_right_alarm", formatCounter(resp.vertical_top_right_alarm));
+                    setText("vertical_top_left_alarm", formatCounter(resp.vertical_top_left_alarm));
+                    setText("horizontal_interior_left_alarm", formatCounter(resp.horizontal_interior_left_alarm));
+                    setText("horizontal_interior_right_alarm", formatCounter(resp.horizontal_interior_right_alarm));
+                    setText("vertical_bottom_left_alarm", formatCounter(resp.vertical_bottom_left_alarm));
+                    setText("vertical_bottom_right_alarm", formatCounter(resp.vertical_bottom_right_alarm));
+                    setText("horizontal_exterior_left_alarm", formatCounter(resp.horizontal_exterior_left_alarm));
+                    setText("horizontal_exterior_right_alarm", formatCounter(resp.horizontal_exterior_right_alarm));
+                    setText("azimuth", formatNumber(resp.azimuth, 6));
+                    setText("elevation", formatNumber(resp.elevation, 6));
+                    setText("aoil", formatNumber(resp.aoil, 6));
+                    setText("aoit", formatNumber(resp.aoit, 6));
+                    setText("query_aoil", formatNumber(resp.query_aoil, 6));
+                    setText("query_aoit", formatNumber(resp.query_aoit, 6));
+                    setText("interp_x", formatNumber(resp.interp_x, 6));
+                    setText("interp_z", formatNumber(resp.interp_z, 6));
+                    setText("x_target", formatNumber(resp.x_target, 6));
+                    setText("z_target", formatNumber(resp.z_target, 6));
+                    setText("x", formatNumber(resp.x, 6));
+                    setText("z", formatNumber(resp.z, 6));
+                    setText("gps_nmea", resp.gps_nmea_available ? "YES" : "NO");
+                    setText("gps_last_rmc", resp.gps_last_rmc || "---");
+                    finishStatusPoll(true);
+                }
+                catch (e) {
+                    finishStatusPoll(false);
+                }
             }
             else if (xhr.readyState === 4) {
-                setTimeout(sendStatusGetRequest, 1000);
+                finishStatusPoll(false);
             }
         };
         xhr.send();
     }
+    setInterfaceForState("");
     sendStatusGetRequest();
 
-    function sendGetRequest(val) {
-        var xhr = new XMLHttpRequest();
-        var timeout = 6000;
-        var requestTimeout = setTimeout(function() {
-            xhr.abort();
-            console.error('Request LED timed out after ' + timeout + ' milliseconds');
-        }, timeout);
+    document.addEventListener("visibilitychange", function () {
+        if (!document.hidden && autoStatusTimer === null && !statusRequestInFlight) {
+            sendStatusGetRequest();
+        }
+    });
 
-        var get_req = "/" + val;
-        xhr.open("GET", get_req, true);
+    function toggleAutoMode() {
+        const requestedMode = !autoMode;
+        const xhr = new XMLHttpRequest();
+        xhr.timeout = 3000;
+        xhr.open("GET", "/auto_mode_toggle", true);
+        xhr.ontimeout = function () {
+            console.log("AUTO MODE request timeout");
+        }
+        xhr.onerror = function () {
+            console.log("AUTO MODE request error");
+        }
         xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4) {
-                clearTimeout(requestTimeout);
-                if (xhr.status === 200) {
-                    if (get_req === '/LedGreen' || get_req === '/LedRed') {
-                        writeConsole("LED Toggling");
-                    }
-                }
-            };
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                setAutoButton(requestedMode);
+                console.log(requestedMode ? "AUTO MODE enabled" : "AUTO MODE disabled");
+            }
         };
         xhr.send();
     }
-    function switch_color(val, id, color) {
-        switch (val) {
-            case 1:
-                if (color == "green") {
-                    document.getElementById(id).className = "button button-on-green";
-                }
-                else if (color == "red") {
-                    document.getElementById(id).className = "button button-on-red";
-                }
-                break;
-            case 0:
-                document.getElementById(id).className = "button button-off";
-                break;
 
-            default:
-                console.log("value not supported : " + val + ".");
-                break;
+    function syncTime() {
+        const xhr = new XMLHttpRequest();
+        xhr.timeout = 3000;
+        xhr.open("GET", "/sync_time", true);
+        xhr.ontimeout = function () {
+            console.log("SYNC TIME request timeout");
         }
+        xhr.onerror = function () {
+            console.log("SYNC TIME request error");
+        }
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                console.log("SYNC TIME requested");
+                sendStatusGetRequest();
+            }
+        };
+        xhr.send();
     }
-    function switch_name(val, id) {
-        switch (val) {
-            case 1:
-                document.getElementById(id).innerHTML = "Button ON";
-                break;
-            case 0:
-                document.getElementById(id).innerHTML = "Button OFF";
-                break;
 
-            default:
-                console.log("value not supported : " + val + ".");
-                break;
+    function home() {
+        const xhr = new XMLHttpRequest();
+        xhr.timeout = 3000;
+        xhr.open("GET", "/home", true);
+        xhr.ontimeout = function () {
+            console.log("HOME request timeout");
         }
+        xhr.onerror = function () {
+            console.log("HOME request error");
+        }
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                console.log("HOME requested");
+            }
+        };
+        xhr.send();
     }
-    function goToPage(val) {
-        window.location.href = "/" + val;
+
+    function resetAlarm() {
+        const xhr = new XMLHttpRequest();
+        xhr.timeout = 3000;
+        xhr.open("GET", "/reset_alarm", true);
+        xhr.ontimeout = function () {
+            console.log("RESET ALARM request timeout");
+        }
+        xhr.onerror = function () {
+            console.log("RESET ALARM request error");
+        }
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                console.log("RESET ALARM requested");
+                sendStatusGetRequest();
+            }
+        };
+        xhr.send();
     }
 </script>
 

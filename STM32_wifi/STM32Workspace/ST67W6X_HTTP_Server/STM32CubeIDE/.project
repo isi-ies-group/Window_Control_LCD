@@ -180,9 +180,69 @@
 			<locationURI>PARENT-1-PROJECT_LOC/Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_uart_ex.c</locationURI>
 		</link>
 		<link>
+			<name>Application/User/Core/aoicalc.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/aoicalc.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/aoicalc.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/aoicalc.h</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/aoicalc_func.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/aoicalc_func.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/aoicalc_func.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/aoicalc_func.h</locationURI>
+		</link>
+		<link>
 			<name>Application/User/Core/app_freertos.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/app_freertos.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/autoMode.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/autoMode.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/autoMode.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/autoMode.h</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/commonlib.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/commonlib.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/commonlib.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/commonlib.h</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/controled_shutdown.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/controled_shutdown.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/controled_shutdown.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/controled_shutdown.h</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/eph_input_mode.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/eph_input_mode.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/eph_input_mode.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/eph_input_mode.h</locationURI>
 		</link>
 		<link>
 			<name>Application/User/Core/global_structs.c</name>
@@ -190,14 +250,144 @@
 			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/global_structs.c</locationURI>
 		</link>
 		<link>
+			<name>Application/User/Core/gps.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/gps.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/gps.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/gps.h</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/hello.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/hello.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/hello.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/hello.h</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/interpolation.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/interpolation.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/interpolation.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/interpolation.h</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/interpolation_func.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/interpolation_func.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/interpolation_func.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/interpolation_func.h</locationURI>
+		</link>
+		<link>
 			<name>Application/User/Core/main.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/main.c</locationURI>
 		</link>
 		<link>
+			<name>Application/User/Core/manual_mode.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/manual_mode.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/manual_mode.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/manual_mode.h</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/matrices.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/matrices.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/matrices.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/matrices.h</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/movement.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/movement.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/movement.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/movement.h</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/movement_alarm.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/movement_alarm.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/movement_alarm.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/movement_alarm.h</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/movement_parameters.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/movement_parameters.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/movement_parameters.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/movement_parameters.h</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/movement_task.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/movement_task.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/movement_task.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/movement_task.h</locationURI>
+		</link>
+		<link>
 			<name>Application/User/Core/solar_app.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/solar_app.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/spa.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/spa.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/spa.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/spa.h</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/spa_func.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/spa_func.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/spa_func.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/spa_func.h</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/state_machine.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/state_machine.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/state_machine.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/state_machine.h</locationURI>
 		</link>
 		<link>
 			<name>Application/User/Core/stm32u5xx_hal_msp.c</name>
@@ -213,6 +403,16 @@
 			<name>Application/User/Core/stm32u5xx_it.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/stm32u5xx_it.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/storage.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/storage.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/storage.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/storage.h</locationURI>
 		</link>
 		<link>
 			<name>Application/User/Core/test.c</name>
@@ -398,126 +598,6 @@
 			<name>Middlewares/RTOS2/CMSIS/RTOS2/Heap/Heap_4/heap_4.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/aoicalc.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/aoicalc.c</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/aoicalc_func.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/aoicalc_func.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/autoMode.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/autoMode.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/commonlib.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/commonlib.c</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/eph_input_mode.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/eph_input_mode.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/gps.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/gps.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/interpolation.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/interpolation.c</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/interpolation_func.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/interpolation_func.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/manual_mode.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/manual_mode.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/matrices.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/matrices.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/spa.c</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/spa.c</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/spa_func.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Src/spa_func.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/aoicalc.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/aoicalc.h</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/aoicalc_func.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/aoicalc_func.h</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/autoMode.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/autoMode.h</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/commonlib.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/commonlib.h</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/eph_input_mode.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/eph_input_mode.h</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/gps.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/gps.h</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/interpolation.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/interpolation.h</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/interpolation_func.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/interpolation_func.h</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/manual_mode.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/manual_mode.h</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/matrices.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/matrices.h</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/spa.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/spa.h</locationURI>
-		</link>
-		<link>
-			<name>Application/User/Core/spa_func.h</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Core/Inc/spa_func.h</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

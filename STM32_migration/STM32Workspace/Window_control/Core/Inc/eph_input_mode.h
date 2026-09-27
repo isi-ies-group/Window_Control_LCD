@@ -1,25 +1,16 @@
-//#ifndef eph_input_mode_h
-//#define eph_input_mode_h
-#ifndef eph_input_mode_h
-#define eph_input_mode_h
+#ifndef EPH_INPUT_MODE_H
+#define EPH_INPUT_MODE_H
+
+#include <stdbool.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-
-
-
-void ephInputMode();
-
-#ifndef aoicalc_h
-#define aoicalc_h
-
+bool ephInputMode(void);
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif
-
-//#endif
+#endif /* EPH_INPUT_MODE_H */

@@ -1,0 +1,62 @@
+@startuml
+title FSM STARTUP sequence - Homing and GPS time sync
+
+skinparam defaultFontSize 34
+skinparam sequenceParticipantFontSize 34
+skinparam sequenceMessageFontSize 32
+skinparam sequenceTitleFontSize 38
+skinparam sequenceLifeLineBorderThickness 3
+skinparam sequenceArrowThickness 3
+skinparam ParticipantPadding 28
+skinparam BoxPadding 18
+
+participant "app:MainApp" as App
+participant "fsm:FSM" as FSM
+participant "movement:MovementTask" as Move
+participant "storage:Storage" as Storage
+participant "gps:GPS_Task" as GPS
+participant "web:HTTPServer" as Web
+actor "client:WebClient" as Client
+
+App -> FSM : initFSM()
+activate FSM
+FSM -> FSM : thisSt = STARTUP\nstartupReturnState = saved state
+
+par HTTP server remains available
+    Client -> Web : GET /, /status, control commands
+    Web --> Client : HTML / JSON / command result
+else FSM STARTUP sequence
+    FSM -> FSM : wait 5 s power/motor settle
+    FSM -> Move : requestHome()
+    activate Move
+    Move -> Move : GoHomePair(&g_x_val, &g_z_val)
+    Move -> Storage : savePos()
+    deactivate Move
+
+    loop until movement idle
+        FSM -> Move : movementTaskIsBusy()
+        Move --> FSM : false
+    end
+
+    FSM -> GPS : GPS_Task_RequestTimeSync()
+    activate GPS
+    GPS -> GPS : GPS_PowerOnForSync()
+    GPS -> GPS : read UART and parse RMC/ZDA
+    GPS -> GPS : convert UTC to local time
+    GPS -> GPS : RTC_SetFromTM()
+    GPS -> Storage : saveTimeMode(false)
+    GPS -> GPS : GPS_PowerOffAfterSync()
+    deactivate GPS
+
+    alt GPS synced
+        FSM -> FSM : fsmFinishStartup()
+    else 5 min timeout
+        FSM -> FSM : fsmFinishStartup()
+    end
+
+    FSM -> FSM : restore saved STDBY/AUTO/MANUAL/EPH_INPUT
+end
+
+deactivate FSM
+
+@enduml

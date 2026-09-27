@@ -9,30 +9,55 @@
 
 extern AOIInputs g_AOIInputs;
 
+static char normalizeCountryChar(char c) {
+    if ((c >= 'A') && (c <= 'Z')) {
+        return (char)(c + ('a' - 'A'));
+    }
+
+    return c;
+}
+
+static bool countryEqualsIgnoreCase(const char *country, const char *expected) {
+    if ((country == NULL) || (expected == NULL)) {
+        return false;
+    }
+
+    while ((*country != '\0') && (*expected != '\0')) {
+        if (normalizeCountryChar(*country) != normalizeCountryChar(*expected)) {
+            return false;
+        }
+
+        country++;
+        expected++;
+    }
+
+    return (*country == '\0') && (*expected == '\0');
+}
+
 /**
  * Calculate timezone including DST
  * European rules for countries with DST
  */
-int getTimezoneForCountry(const std::string& country, int year, int month, int day) {
+static int getTimezoneForCountryText(const char *country, int year, int month, int day) {
 
     // --- Base offset--
     int baseOffset = 0;
     bool hasDST = false;
 
     // --- Countries definition ---
-    if (country == "Spain") {
+    if (countryEqualsIgnoreCase(country, "Spain")) {
         baseOffset = 1; hasDST = true;
     }
-    else if (country == "Spain_Canary") {
+    else if (countryEqualsIgnoreCase(country, "Spain_Canary")) {
         baseOffset = 0; hasDST = true;
     }
-    else if (country == "UK") {
+    else if (countryEqualsIgnoreCase(country, "UK")) {
         baseOffset = 0; hasDST = true;
     }
-    else if (country == "Poland") {
+    else if (countryEqualsIgnoreCase(country, "Poland")) {
         baseOffset = 1; hasDST = true;
     }
-    else if (country == "Argentina") {
+    else if (countryEqualsIgnoreCase(country, "Argentina")) {
         baseOffset = -3; hasDST = false;
     }
     else {
@@ -76,6 +101,16 @@ int getTimezoneForCountry(const std::string& country, int year, int month, int d
     return baseOffset;
 }
 
+int getTimezoneForCountryName(const char *country, int year, int month, int day) {
+    /* C API used by GPS code to reuse the SPA country/DST table. */
+    return getTimezoneForCountryText(country, year, month, day);
+}
+
+int getTimezoneForCountry(const std::string& country, int year, int month, int day) {
+    /* C++ API used by SPA code with std::string inputs. */
+    return getTimezoneForCountryText(country.c_str(), year, month, day);
+}
+
 void SPA_f() {
 
     spa_data spa;
@@ -109,7 +144,7 @@ void SPA_f() {
     spa.function      = SPA_ZA_RTS;
 
     printf(
-        "[SPA INPUT] %04f-%02f-%02f %02f:%02f:%02f  tz=%f\n",
+        "[SPA INPUT] %04d-%02d-%02d %02d:%02d:%02.0f  tz=%f\n",
         spa.year, spa.month, spa.day,
         spa.hour, spa.minute, spa.second,
         spa.timezone
@@ -118,6 +153,8 @@ void SPA_f() {
     int result = spa_calculate(&spa);
 
     if (result != 0) {
+        g_sunrise_epoch = 0;
+        g_sunset_epoch  = 0;
         return;
     }
 
@@ -133,7 +170,6 @@ void SPA_f() {
 
         struct tm t_now;
         RTC_GetToTM(&t_now);
-        time_t now = mktime(&t_now);
 
        // midnight epoch
         struct tm t_midnight = t_now;
@@ -146,11 +182,12 @@ void SPA_f() {
         time_t sunrise_epoch = midnight + (time_t)(spa.sunrise * 3600.0);
         time_t sunset_epoch  = midnight + (time_t)(spa.sunset  * 3600.0);
 
-       // if sunrise and/or epoch are behind real time, add 24h
-        if (sunrise_epoch <= now) sunrise_epoch += 24 * 3600;
-        if (sunset_epoch  <= now) sunset_epoch  += 24 * 3600;
-
+       // Store today's sunrise and sunset. Auto mode compares them with the current local RTC.
         g_sunrise_epoch = sunrise_epoch;
         g_sunset_epoch  = sunset_epoch;
+    }
+    else {
+        g_sunrise_epoch = 0;
+        g_sunset_epoch  = 0;
     }
 }

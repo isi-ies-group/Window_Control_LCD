@@ -2,6 +2,7 @@
 #define GLOBAL_STRUCTS_H
 
 #include <stdbool.h>
+#include <stdint.h>
 #include <time.h>
 
 #include "global_def.h"
@@ -46,7 +47,23 @@ extern volatile int auto_counter;
 
 extern float g_x_val;
 extern float g_z_val;
+extern float g_x_target;
+extern float g_z_target;
+extern float g_interp_x_val;
+extern float g_interp_z_val;
+extern float g_query_aoit;
+extern float g_query_aoil;
 extern time_t g_sunrise_epoch;
 extern time_t g_sunset_epoch;
+
+extern volatile bool g_any_movement_alarm;
+extern volatile uint32_t Vertical_top_right_alarm;
+extern volatile uint32_t Vertical_top_left_alarm;
+extern volatile uint32_t horizontal_interior_left_alarm;
+extern volatile uint32_t horizontal_interior_right_alarm;
+extern volatile uint32_t vertical_bottom_left_alarm;
+extern volatile uint32_t vertical_bottom_right_alarm;
+extern volatile uint32_t horizontal_exterior_left_alarm;
+extern volatile uint32_t horizontal_exterior_right_alarm;
 
 #endif /* GLOBAL_STRUCTS_H */

@@ -83,13 +83,13 @@ typedef enum
 #define WIFI_SAP_MAX_CONNECTIONS    4
 
 /** Low power configuration [0: disable / 1: sleep / 2: stop / 3: standby] */
-#define LOW_POWER_MODE              LOW_POWER_DISABLE
+#define LOW_POWER_MODE              LOW_POWER_STOP_ENABLE
 
 /**
   * Enable/Disable MCU Debugger pins (dbg serial wires)
   * @note  by HW serial wires are ON by default, need to put them OFF to save power
   */
-#define DEBUGGER_ENABLED            1
+#define DEBUGGER_ENABLED            0
 
 /* USER CODE BEGIN EC */
 

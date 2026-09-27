@@ -1,0 +1,67 @@
+@startuml
+title STM32 Window Control - Startup sequence
+
+participant "main:MainSystem" as Main
+participant "rtos:FreeRTOS" as RTOS
+participant "st:ST67W6XTask" as ST
+participant "app:MainApp" as App
+participant "storage:Storage" as Storage
+participant "movement:MovementTask" as Move
+participant "fsm:FSM" as FSM
+participant "gps:GPS_Task" as GPS
+participant "wifi:ST67W6X_AP" as WiFi
+participant "web:HTTPServer" as Web
+actor "client:WebClient" as Client
+
+Main -> Main : HAL_Init(), SystemClock_Config(), MX_*_Init()
+Main -> ST : MX_ST67W6X_Init() / xTaskCreate(ST67W6XTask)
+Main -> RTOS : osKernelInitialize()
+Main -> RTOS : MX_FREERTOS_Init()
+RTOS -> GPS : osThreadNew(GPS_Task)
+Main -> RTOS : osKernelStart()
+
+RTOS -> ST : start ST67W6XTask
+activate ST
+ST -> App : main_app()
+activate App
+App -> WiFi : W6X_Init(), W6X_WiFi_Init(), W6X_Net_Init()
+App -> Storage : Storage_LoadAll()
+Storage --> App : persisted state/config/time/position
+App -> Move : initMovementTask()
+activate Move
+Move -> Move : init_motors(), queue, Movement_Task
+deactivate Move
+App -> FSM : initFSM()
+activate FSM
+FSM -> FSM : thisSt = STARTUP\nstartupReturnState = saved state
+deactivate FSM
+App -> WiFi : W6X_WiFi_AP_Start()
+App -> Web : http_server_socket(NULL)
+activate Web
+
+par HTTP server available
+    Client -> Web : GET /, /status, control commands
+    Web --> Client : HTML / JSON / command result
+else FSM startup sequence
+    FSM -> FSM : wait 5 s power/motor settle
+    FSM -> Move : requestHome()
+    activate Move
+    Move -> Move : GoHomePair(&g_x_val, &g_z_val)
+    Move -> Storage : savePos()
+    deactivate Move
+    FSM -> Move : movementTaskIsBusy()
+    Move --> FSM : false
+    FSM -> GPS : GPS_Task_RequestTimeSync()
+    activate GPS
+    GPS -> GPS : GPS_PowerOnForSync()
+    GPS -> GPS : read UART and parse RMC/ZDA
+    GPS -> GPS : UTC to local time by country/DST
+    GPS -> GPS : RTC_SetFromTM()
+    GPS -> Storage : saveTimeMode(false)
+    GPS -> GPS : GPS_PowerOffAfterSync()
+    deactivate GPS
+    FSM -> FSM : wait synced or 5 min timeout
+    FSM -> FSM : restore saved STDBY/AUTO/MANUAL/EPH_INPUT
+end
+
+@enduml

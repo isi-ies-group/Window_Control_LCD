@@ -1,0 +1,45 @@
+@startuml
+title STM32 Window Control - Simple startup sequence
+
+skinparam defaultFontSize 36
+skinparam sequenceParticipantFontSize 36
+skinparam sequenceMessageFontSize 34
+skinparam sequenceTitleFontSize 40
+skinparam sequenceLifeLineBorderThickness 3
+skinparam sequenceArrowThickness 3
+skinparam ParticipantPadding 30
+skinparam BoxPadding 20
+
+participant "main:MainSystem" as Main
+participant "rtos:FreeRTOS" as RTOS
+participant "st:ST67W6XTask" as ST
+participant "app:MainApp" as App
+participant "storage:Storage" as Storage
+participant "movement:MovementTask" as Move
+participant "fsm:FSM" as FSM
+participant "wifi:ST67W6X_AP" as WiFi
+participant "web:HTTPServer" as Web
+
+Main -> Main : HAL_Init()
+Main -> Main : SystemClock_Config()
+Main -> Main : MX_GPIO/SPI/UART/RTC/ST67W6X_Init()
+Main -> RTOS : osKernelInitialize()
+Main -> RTOS : MX_FREERTOS_Init()
+Main -> RTOS : osKernelStart()
+
+RTOS -> ST : start ST67W6XTask
+activate ST
+ST -> App : main_app()
+activate App
+
+App -> WiFi : W6X_Init()
+App -> WiFi : W6X_WiFi_Init()
+App -> WiFi : W6X_Net_Init()
+App -> Storage : Storage_LoadAll()
+Storage --> App : persisted configuration
+App -> Move : initMovementTask()
+App -> FSM : initFSM()
+App -> WiFi : W6X_WiFi_AP_Start()
+App -> Web : http_server_socket(NULL)
+
+@enduml

@@ -1,4 +1,4 @@
 index_httpserver.html
 404.html
 favicon.svg
-ST_logo_2020_white_no_tagline_rgb.svg
+IES_logo.svg

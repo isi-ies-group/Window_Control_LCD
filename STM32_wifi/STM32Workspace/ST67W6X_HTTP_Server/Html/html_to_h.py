@@ -107,7 +107,7 @@ html_desc_dict = {
                                                  ],
     'favicon.svg':                              ['response_favicon_svg',
                                                  svg_default_header],
-    'ST_logo_2020_white_no_tagline_rgb.svg':    ['response_st_logo_svg',
+    'IES_logo.svg':                             ['response_st_logo_svg',
                                                  svg_default_header],
 }
 
