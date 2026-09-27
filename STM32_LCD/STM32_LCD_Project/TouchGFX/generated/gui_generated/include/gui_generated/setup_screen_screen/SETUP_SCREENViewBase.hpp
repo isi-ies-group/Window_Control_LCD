@@ -12,7 +12,6 @@
 #include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/containers/ScrollableContainer.hpp>
-#include <touchgfx/mixins/Draggable.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 
 class SETUP_SCREENViewBase : public touchgfx::View<SETUP_SCREENPresenter>
@@ -37,8 +36,8 @@ protected:
     touchgfx::ScrollableContainer scrollableContainer1;
     touchgfx::ScalableImage fondoCasita;
     touchgfx::ScalableImage iconoCasita;
-    touchgfx::Draggable< touchgfx::ScalableImage > setup_background;
-    touchgfx::Draggable< touchgfx::ScalableImage > icon_setup;
+    touchgfx::ScalableImage setup_background;
+    touchgfx::ScalableImage icon_setup;
     touchgfx::ImageButtonStyle< touchgfx::ClickButtonTrigger >  home_button;
 
 private:

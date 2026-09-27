@@ -60,8 +60,7 @@
                 "Height": 50,
                 "LockPosition": true,
                 "Filename": "__generated\\alternate_theme_images_widgets_button_icon_round_huge_fill_action.png",
-                "ScalingAlgorithm": "Nearest-neighbor",
-                "Draggable": true
+                "ScalingAlgorithm": "Nearest-neighbor"
               },
               {
                 "Type": "ScalableImage",
@@ -72,8 +71,7 @@
                 "Height": 37,
                 "LockPosition": true,
                 "Filename": "__generated\\icon_theme_images_communication_phonelink_setup_50_50_000000.svg.png",
-                "ScalingAlgorithm": "Nearest-neighbor",
-                "Draggable": true
+                "ScalingAlgorithm": "Nearest-neighbor"
               }
             ]
           },
@@ -109,8 +107,7 @@
                 "Height": 50,
                 "LockPosition": true,
                 "Filename": "__generated\\alternate_theme_images_widgets_button_icon_round_huge_fill_action.png",
-                "ScalingAlgorithm": "Nearest-neighbor",
-                "Draggable": true
+                "ScalingAlgorithm": "Nearest-neighbor"
               },
               {
                 "Type": "ScalableImage",
@@ -121,8 +118,7 @@
                 "Height": 38,
                 "LockPosition": true,
                 "Filename": "cargador.png",
-                "ScalingAlgorithm": "Nearest-neighbor",
-                "Draggable": true
+                "ScalingAlgorithm": "Nearest-neighbor"
               }
             ]
           },
@@ -174,8 +170,7 @@
                 "Height": 50,
                 "LockPosition": true,
                 "Filename": "__generated\\alternate_theme_images_widgets_button_icon_round_huge_fill_action.png",
-                "ScalingAlgorithm": "Nearest-neighbor",
-                "Draggable": true
+                "ScalingAlgorithm": "Nearest-neighbor"
               },
               {
                 "Type": "ScalableImage",
@@ -186,8 +181,7 @@
                 "Height": 39,
                 "LockPosition": true,
                 "Filename": "haciendo-clic.png",
-                "ScalingAlgorithm": "Nearest-neighbor",
-                "Draggable": true
+                "ScalingAlgorithm": "Nearest-neighbor"
               }
             ]
           },
@@ -422,8 +416,7 @@
             "Width": 46,
             "Height": 46,
             "Filename": "__generated\\alternate_theme_images_widgets_button_icon_round_huge_fill_action.png",
-            "ScalingAlgorithm": "Nearest-neighbor",
-            "Draggable": true
+            "ScalingAlgorithm": "Nearest-neighbor"
           },
           {
             "Type": "ScalableImage",
@@ -433,8 +426,7 @@
             "Width": 40,
             "Height": 38,
             "Filename": "cargador.png",
-            "ScalingAlgorithm": "Nearest-neighbor",
-            "Draggable": true
+            "ScalingAlgorithm": "Nearest-neighbor"
           },
           {
             "Type": "FlexButton",
@@ -551,8 +543,7 @@
             "Width": 46,
             "Height": 46,
             "Filename": "__generated\\alternate_theme_images_widgets_button_icon_round_huge_fill_action.png",
-            "ScalingAlgorithm": "Nearest-neighbor",
-            "Draggable": true
+            "ScalingAlgorithm": "Nearest-neighbor"
           },
           {
             "Type": "ScalableImage",
@@ -562,8 +553,7 @@
             "Width": 40,
             "Height": 37,
             "Filename": "__generated\\icon_theme_images_communication_phonelink_setup_50_50_000000.svg.png",
-            "ScalingAlgorithm": "Nearest-neighbor",
-            "Draggable": true
+            "ScalingAlgorithm": "Nearest-neighbor"
           },
           {
             "Type": "FlexButton",
@@ -680,8 +670,7 @@
             "Width": 46,
             "Height": 46,
             "Filename": "__generated\\alternate_theme_images_widgets_button_icon_round_huge_fill_action.png",
-            "ScalingAlgorithm": "Nearest-neighbor",
-            "Draggable": true
+            "ScalingAlgorithm": "Nearest-neighbor"
           },
           {
             "Type": "ScalableImage",
@@ -691,8 +680,7 @@
             "Width": 38,
             "Height": 37,
             "Filename": "haciendo-clic.png",
-            "ScalingAlgorithm": "Nearest-neighbor",
-            "Draggable": true
+            "ScalingAlgorithm": "Nearest-neighbor"
           },
           {
             "Type": "FlexButton",

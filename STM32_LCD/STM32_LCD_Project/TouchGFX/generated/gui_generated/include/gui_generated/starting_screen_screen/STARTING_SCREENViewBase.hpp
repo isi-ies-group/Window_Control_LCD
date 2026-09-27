@@ -12,7 +12,6 @@
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
-#include <touchgfx/mixins/Draggable.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/containers/ScrollableContainer.hpp>
 
@@ -35,16 +34,16 @@ protected:
     touchgfx::Image fondo;
     touchgfx::Container container_setup;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  setup_button;
-    touchgfx::Draggable< touchgfx::ScalableImage > setup_background;
-    touchgfx::Draggable< touchgfx::ScalableImage > icon_setup;
+    touchgfx::ScalableImage setup_background;
+    touchgfx::ScalableImage icon_setup;
     touchgfx::Container container_automode;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  automode_button;
-    touchgfx::Draggable< touchgfx::ScalableImage > automode_background;
-    touchgfx::Draggable< touchgfx::ScalableImage > icon_automode;
+    touchgfx::ScalableImage automode_background;
+    touchgfx::ScalableImage icon_automode;
     touchgfx::Container container_manual_mode;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  manual_button;
-    touchgfx::Draggable< touchgfx::ScalableImage > manual_background;
-    touchgfx::Draggable< touchgfx::ScalableImage > icon_manual;
+    touchgfx::ScalableImage manual_background;
+    touchgfx::ScalableImage icon_manual;
     touchgfx::ScalableImage imagen_fondo_arriba;
     touchgfx::ScalableImage imagen_ies;
     touchgfx::ScalableImage imagen_politecnica;
